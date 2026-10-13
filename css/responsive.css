@@ -1,0 +1,225 @@
+/* ==========================================================================
+   XIPHIAS - 3D IT SOFTWARE COMPANY
+   Responsive & Adaptive Breakpoints
+   Standards: Mobile-First & Fluid Layout Protection
+   ========================================================================== */
+
+/* Tablet & Smaller Laptops (<= 1024px) */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .hero-desc {
+    margin: 0 auto 36px auto;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-stats-row {
+    justify-content: center;
+  }
+
+  .hero-visual-card {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .card-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+/* Tablets (<= 768px) */
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 70px 0;
+  }
+
+  .subpage-hero {
+    padding-top: 130px;
+    padding-bottom: 50px;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 340px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-left: 1px solid rgba(2, 132, 199, 0.2);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 28px;
+    padding: 60px 30px;
+    transition: right 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    box-shadow: -15px 0 40px rgba(15, 23, 42, 0.12);
+    z-index: 100;
+  }
+
+  .nav-menu.open {
+    right: 0;
+  }
+
+  .nav-link {
+    font-size: 1.25rem;
+  }
+
+  .header-actions .btn-wave {
+    display: none;
+  }
+
+  .card-grid-3,
+  .card-grid-2,
+  .card-grid-4 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .calculator-box,
+  .contact-form-card {
+    padding: 28px 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .hero-img-wrap {
+    height: 360px;
+  }
+
+  .floating-spec-badge {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 14px;
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Mobile Phones (<= 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-stats-row {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-cta-group .btn-wave,
+  .hero-cta-group .btn-wave-outline {
+    width: 100%;
+  }
+
+  .wave-divider svg {
+    height: 50px;
+  }
+
+  .cinematic-scroll-track {
+    height: 380vh;
+  }
+
+  .cinematic-status-chip {
+    top: 75px;
+    right: 20px;
+    font-size: 0.68rem;
+    padding: 4px 12px;
+  }
+
+  .cinematic-content-container {
+    bottom: 24px;
+    left: 18px;
+    right: 18px;
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .cinematic-story-layer {
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .cinematic-headline {
+    font-size: 1.45rem;
+    line-height: 1.2;
+    font-weight: 400;
+  }
+
+  .cinematic-sub-headline,
+  .cinematic-brand-headline {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  .cinematic-supporting {
+    font-size: 0.8rem;
+    margin-bottom: 14px;
+    max-width: 100%;
+  }
+
+  .cinematic-cta-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn-cinematic-primary,
+  .btn-cinematic-secondary {
+    padding: 7px 14px;
+    font-size: 0.78rem;
+    width: auto;
+  }
+
+  .metric-pill strong {
+    font-size: 1.8rem;
+  }
+
+  .wave-control-bar {
+    border-radius: 20px;
+    padding: 8px 12px;
+  }
+
+  .wave-control-btn {
+    font-size: 0.78rem;
+    padding: 4px 10px;
+  }
+}

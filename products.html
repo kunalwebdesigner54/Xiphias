@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products & Innovations | XIPHIAS Enterprise Software Suite</title>
+  <meta name="description" content="Explore XIPHIAS proprietary software products: XiphiasOS Cloud Fabric, DataWave AI Engine, and ShieldMesh Cyber Core with interactive ROI calculator.">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <canvas id="webgl-wave-canvas"></canvas>
+  <div class="ambient-glow-grid"></div>
+
+  <div class="content-wrapper">
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+      <div class="container header-container">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-wave-icon"><i class="fa-solid fa-water"></i></div>
+          <span>XIPHIAS<span class="gradient-text">.TECH</span></span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="products.html" class="nav-link active">Products</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <a href="contact.html" class="btn-wave">
+            <span>Consult Architects</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <button class="mobile-toggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subpage Hero (Screen 3) -->
+    <section class="subpage-hero">
+      <div class="container">
+        <div class="floating-wave-pill">
+          <span class="wave-dot-pulse"></span>
+          <span>Proprietary Cloud Platforms</span>
+        </div>
+        <h1>Enterprise Software <span class="gradient-text">Engineered for Hyperscale</span></h1>
+        <p>Purpose-built software suites designed by XIPHIAS engineers to solve complex distributed infrastructure, streaming neural data, and cyber defense.</p>
+      </div>
+    </section>
+
+    <!-- Wavy Divider -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C150,90 350,-40 500,60 C650,160 900,10 1200,40 L1200,120 L0,120 Z" class="wave-fill-primary"></path>
+        <path d="M0,0 C150,90 350,-40 500,60 C650,160 900,10 1200,40" fill="none" class="wave-glow-stroke"></path>
+      </svg>
+    </div>
+
+    <!-- Flagship Products Showcase -->
+    <section class="section-padding" style="background: var(--bg-secondary);">
+      <div class="container">
+
+        <!-- Product 1: XiphiasOS -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 90px;" class="hero-grid">
+          <div>
+            <div class="floating-wave-pill">
+              <i class="fa-solid fa-server"></i>
+              <span>FLAGSHIP SUITE v3.8</span>
+            </div>
+            <h2 style="font-size: clamp(2rem, 3.2vw, 2.6rem); margin-bottom: 20px;">
+              XiphiasOS <span class="gradient-text">Distributed Cloud Mesh</span>
+            </h2>
+            <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+              An autonomous distributed orchestration platform that manages multi-cloud workloads across AWS, GCP, and bare metal with zero vendor lock-in.
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 30px;">
+              <div style="background: #ffffff; border: 1px solid rgba(2,132,199,0.2); box-shadow: 0 4px 15px rgba(15,23,42,0.04); padding: 16px; border-radius: 16px 6px 16px 6px;">
+                <h4 style="color: var(--neon-cyan); margin-bottom: 6px;"><i class="fa-solid fa-bolt"></i> Sub-10ms Latency</h4>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin:0;">Dynamic edge routing around congestion.</p>
+              </div>
+              <div style="background: #ffffff; border: 1px solid rgba(124,58,237,0.2); box-shadow: 0 4px 15px rgba(15,23,42,0.04); padding: 16px; border-radius: 6px 16px 6px 16px;">
+                <h4 style="color: var(--neon-purple); margin-bottom: 6px;"><i class="fa-solid fa-arrows-split-up-and-left"></i> Auto-Balancing</h4>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin:0;">Autonomous workload migrations.</p>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-wave">Request Product Demo</a>
+          </div>
+
+          <div class="hero-visual-card">
+            <div class="hero-frame-outer">
+              <div class="hero-img-wrap" style="height: 380px;">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80" alt="XiphiasOS Enterprise Server Architecture">
+                <div class="hero-overlay-badge">
+                  <div>
+                    <h4>XiphiasOS Mesh Controller</h4>
+                    <p>Continuous Heartbeat & eBPF Telemetry</p>
+                  </div>
+                  <span class="pulse-chip">STABLE v3.8</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2: DataWave Neural Engine -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin-bottom: 90px;" class="hero-grid">
+          <div class="hero-visual-card">
+            <div class="hero-frame-outer">
+              <div class="hero-img-wrap" style="height: 380px;">
+                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80" alt="DataWave Neural Engine in Operation">
+                <div class="hero-overlay-badge">
+                  <div>
+                    <h4>DataWave Neural Processing</h4>
+                    <p>1.2M Tokens/sec Throughput</p>
+                  </div>
+                  <span class="pulse-chip">ONLINE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="floating-wave-pill">
+              <i class="fa-solid fa-microchip"></i>
+              <span>AI PLATFORM</span>
+            </div>
+            <h2 style="font-size: clamp(2rem, 3.2vw, 2.6rem); margin-bottom: 20px;">
+              DataWave <span class="gradient-text">Neural Ingestion Engine</span>
+            </h2>
+            <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
+              Process petabyte-scale event streams in real-time. Embeds native vector indexing, predictive analytics, and automated inference pipelines into enterprise databases.
+            </p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 30px;">
+              <div style="background: #ffffff; border: 1px solid rgba(2,132,199,0.2); box-shadow: 0 4px 15px rgba(15,23,42,0.04); padding: 16px; border-radius: 16px 6px 16px 6px;">
+                <h4 style="color: var(--neon-cyan); margin-bottom: 6px;"><i class="fa-solid fa-gauge-high"></i> Zero Pipeline Lag</h4>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin:0;">Integrated Apache Kafka & ClickHouse core.</p>
+              </div>
+              <div style="background: #ffffff; border: 1px solid rgba(124,58,237,0.2); box-shadow: 0 4px 15px rgba(15,23,42,0.04); padding: 16px; border-radius: 6px 16px 6px 16px;">
+                <h4 style="color: var(--neon-purple); margin-bottom: 6px;"><i class="fa-solid fa-brain"></i> Vector Intelligence</h4>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin:0;">Instant semantic similarity searches.</p>
+              </div>
+            </div>
+            <a href="contact.html" class="btn-wave">Start Free Pilot</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Wavy Divider -->
+    <div class="wave-divider wave-divider-top">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C200,100 450,-30 700,70 C950,170 1100,20 1200,60 L1200,120 L0,120 Z" class="wave-fill-surface"></path>
+        <path d="M0,0 C200,100 450,-30 700,70 C950,170 1100,20 1200,60" fill="none" class="wave-glow-stroke"></path>
+      </svg>
+    </div>
+
+    <!-- Interactive Cost / Cloud ROI Calculator -->
+    <section class="section-padding" style="background: var(--bg-tertiary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="floating-wave-pill">
+            <i class="fa-solid fa-calculator"></i>
+            <span>Interactive Simulator</span>
+          </div>
+          <h2>Estimate Your <span class="gradient-text">Infrastructure Savings</span></h2>
+          <p>Drag the sliders below to calculate how much compute and operational capital XIPHIAS platforms can save your organization.</p>
+        </div>
+
+        <div style="max-width: 860px; margin: 0 auto;" class="calculator-box">
+          <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center;" class="hero-grid">
+            <div>
+              <!-- Slider 1 -->
+              <div class="calc-slider-group">
+                <div class="calc-label-row">
+                  <label for="calc-servers" class="form-label">Active Virtual Instances / Nodes:</label>
+                  <span id="val-servers" class="val-display">120 Instances</span>
+                </div>
+                <input type="range" id="calc-servers" class="cyber-range" min="10" max="1000" step="10" value="120">
+              </div>
+
+              <!-- Slider 2 -->
+              <div class="calc-slider-group">
+                <div class="calc-label-row">
+                  <label for="calc-spend" class="form-label">Current Monthly Cloud Spend:</label>
+                  <span id="val-spend" class="val-display">$25,000/mo</span>
+                </div>
+                <input type="range" id="calc-spend" class="cyber-range" min="5000" max="250000" step="2500" value="25000">
+              </div>
+
+              <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 18px;">
+                *Calculation based on average telemetry benchmark data across 45+ enterprise migrations using XiphiasOS intelligent bin-packing and egress shaping.
+              </p>
+            </div>
+
+            <div class="calc-result-panel">
+              <h4>Projected Annual Savings</h4>
+              <div id="calc-annual-saving" class="big-saving">$128,400</div>
+              <div style="margin-bottom: 20px;">
+                <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Efficiency Optimization</span>
+                <span id="calc-efficiency-boost" style="font-size: 1.6rem; font-weight: 700; color: var(--neon-emerald);">+41%</span>
+              </div>
+              <a href="contact.html" class="btn-wave" style="width: 100%;">Claim Custom Proposal</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-logo">
+              <div class="brand-wave-icon"><i class="fa-solid fa-water"></i></div>
+              <span>XIPHIAS<span class="gradient-text">.TECH</span></span>
+            </a>
+            <p>Empowering global enterprises with fluid 3D software architectures, cloud intelligence, and autonomous zero-trust security.</p>
+            <div class="footer-socials">
+              <a href="#" class="social-circle" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" class="social-circle" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" class="social-circle" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home Overview</a></li>
+              <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> IT Services</a></li>
+              <li><a href="products.html"><i class="fa-solid fa-chevron-right"></i> Flagship Platforms</a></li>
+              <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> Company & Labs</a></li>
+              <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact & Support</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Products</h4>
+            <ul class="footer-links">
+              <li><a href="products.html"><i class="fa-solid fa-chevron-right"></i> XiphiasOS Cloud Mesh</a></li>
+              <li><a href="products.html"><i class="fa-solid fa-chevron-right"></i> DataWave Neural Engine</a></li>
+              <li><a href="products.html"><i class="fa-solid fa-chevron-right"></i> ShieldMesh Cyber</a></li>
+              <li><a href="products.html"><i class="fa-solid fa-chevron-right"></i> ROI Simulator</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Enterprise Consultation</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">Test drive Xiphias platforms in your sandbox environment.</p>
+            <a href="contact.html" class="btn-wave" style="width: 100%;">
+              <span>Start Sandbox Trial</span>
+              <i class="fa-solid fa-flask"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; 2026 XIPHIAS Software Technologies Inc. All rights reserved.</p>
+        <p>Engineered with 3D WebGL, Modern CSS & Zero Regressions.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/wave3d.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

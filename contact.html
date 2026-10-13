@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Architecture Consultation | XIPHIAS</title>
+  <meta name="description" content="Connect with Principal Cloud & AI Architects at XIPHIAS. Schedule confidential architectural reviews or explore enterprise software deployments.">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <canvas id="webgl-wave-canvas"></canvas>
+  <div class="ambient-glow-grid"></div>
+
+  <!-- Success Toast Alert -->
+  <div id="toast-msg" class="toast-msg">
+    <i class="fa-solid fa-circle-check" style="color: var(--neon-cyan); font-size: 1.5rem;"></i>
+    <div>
+      <h5 style="margin: 0; color: var(--text-main); font-size: 0.95rem;">Inquiry Transmitted Successfully!</h5>
+      <p style="margin: 0; color: var(--text-muted); font-size: 0.8rem;">A Principal Systems Architect will contact you within 2 hours.</p>
+    </div>
+  </div>
+
+  <div class="content-wrapper">
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+      <div class="container header-container">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-wave-icon"><i class="fa-solid fa-water"></i></div>
+          <span>XIPHIAS<span class="gradient-text">.TECH</span></span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <a href="contact.html" class="btn-wave">
+            <span>Consult Architects</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <button class="mobile-toggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Subpage Hero (Screen 5) -->
+    <section class="subpage-hero">
+      <div class="container">
+        <div class="floating-wave-pill">
+          <span class="wave-dot-pulse"></span>
+          <span>Encrypted Direct Channel</span>
+        </div>
+        <h1>Initiate <span class="gradient-text">Architectural Consultation</span></h1>
+        <p>Whether you need a confidential security audit, hyperscale cloud migration, or a custom enterprise AI pipeline — our Principal Engineers are ready.</p>
+      </div>
+    </section>
+
+    <!-- Wavy Divider -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C150,90 350,-40 500,60 C650,160 900,10 1200,40 L1200,120 L0,120 Z" class="wave-fill-primary"></path>
+        <path d="M0,0 C150,90 350,-40 500,60 C650,160 900,10 1200,40" fill="none" class="wave-glow-stroke"></path>
+      </svg>
+    </div>
+
+    <!-- Contact & Consultation Layout -->
+    <section class="section-padding" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 50px;" class="hero-grid">
+          
+          <!-- Direct Channels & Offices -->
+          <div>
+            <div class="floating-wave-pill">
+              <i class="fa-solid fa-satellite-dish"></i>
+              <span>GLOBAL COMMAND CENTERS</span>
+            </div>
+            <h2 style="font-size: clamp(1.8rem, 2.8vw, 2.4rem); margin-bottom: 20px;">
+              Immediate Access to <span class="gradient-text">Senior Technical Staff</span>
+            </h2>
+            <p style="color: var(--text-muted); font-size: 1rem; margin-bottom: 30px;">
+              No sales intermediaries. Your inquiry is reviewed directly by a Solutions Architect who understands distributed complexity.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 36px;">
+              <div style="display: flex; align-items: center; gap: 18px; background: #ffffff; border: 1px solid rgba(2,132,199,0.2); box-shadow: 0 4px 15px rgba(15,23,42,0.04); padding: 18px; border-radius: 18px 6px 18px 6px;">
+                <div class="card-icon-wrap" style="margin: 0; width: 48px; height: 48px; font-size: 1.2rem;">
+                  <i class="fa-solid fa-envelope-shield"></i>
+                </div>
+                <div>
+                  <h4 style="margin: 0; color: var(--text-main); font-size: 0.95rem;">Encrypted Enterprise Desk</h4>
+                  <p style="margin: 0; color: var(--neon-cyan); font-size: 0.88rem;">architecture@xiphias.tech</p>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 18px; background: #ffffff; border: 1px solid rgba(124,58,237,0.2); box-shadow: 0 4px 15px rgba(15,23,42,0.04); padding: 18px; border-radius: 6px 18px 6px 18px;">
+                <div class="card-icon-wrap" style="margin: 0; width: 48px; height: 48px; font-size: 1.2rem;">
+                  <i class="fa-solid fa-headset"></i>
+                </div>
+                <div>
+                  <h4 style="margin: 0; color: var(--text-main); font-size: 0.95rem;">24/7 Security Incident Response</h4>
+                  <p style="margin: 0; color: var(--neon-purple); font-size: 0.88rem;">+1 (800) 492-XIPHIAS</p>
+                </div>
+              </div>
+
+              <div style="display: flex; align-items: center; gap: 18px; background: #ffffff; border: 1px solid rgba(5,150,105,0.2); box-shadow: 0 4px 15px rgba(15,23,42,0.04); padding: 18px; border-radius: 18px 6px 18px 6px;">
+                <div class="card-icon-wrap" style="margin: 0; width: 48px; height: 48px; font-size: 1.2rem;">
+                  <i class="fa-solid fa-location-crosshairs"></i>
+                </div>
+                <div>
+                  <h4 style="margin: 0; color: var(--text-main); font-size: 0.95rem;">Silicon Valley Lab</h4>
+                  <p style="margin: 0; color: var(--text-muted); font-size: 0.85rem;">420 University Ave, Palo Alto, CA 94301</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Form Card -->
+          <div class="contact-form-card">
+            <h3 style="font-size: 1.6rem; margin-bottom: 8px;">Schedule Discovery Session</h3>
+            <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 28px;">
+              Fill out your parameters and our Principal Engineers will prepare a tailored system assessment.
+            </p>
+
+            <form id="xiphias-contact-form">
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Full Name *</label>
+                  <input type="text" id="contact-name" class="form-input" placeholder="Sarah Connor" required>
+                </div>
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Corporate Email *</label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="s.connor@enterprise.com" required>
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div class="form-group">
+                  <label for="contact-company" class="form-label">Company / Organization</label>
+                  <input type="text" id="contact-company" class="form-input" placeholder="Apex Global Tech">
+                </div>
+                <div class="form-group">
+                  <label for="contact-service" class="form-label">Primary Interest</label>
+                  <select id="contact-service" class="form-select">
+                    <option value="cloud">Cloud & Kubernetes Mesh</option>
+                    <option value="ai">Enterprise AI & Agent Pipelines</option>
+                    <option value="software">Custom High-Throughput Software</option>
+                    <option value="security">Zero-Trust Cybersecurity Audit</option>
+                    <option value="product">XiphiasOS Platform Demo</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">System Architecture / Challenge Details *</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Briefly describe your current stack, expected request volume, and desired timeline..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn-wave" style="width: 100%; padding: 15px;">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Transmit Inquiry to Solutions Architects</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Wavy Divider -->
+    <div class="wave-divider wave-divider-top">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C200,100 450,-30 700,70 C950,170 1100,20 1200,60 L1200,120 L0,120 Z" class="wave-fill-surface"></path>
+        <path d="M0,0 C200,100 450,-30 700,70 C950,170 1100,20 1200,60" fill="none" class="wave-glow-stroke"></path>
+      </svg>
+    </div>
+
+    <!-- Interactive FAQ Accordion -->
+    <section class="section-padding" style="background: var(--bg-tertiary);">
+      <div class="container" style="max-width: 860px;">
+        <div class="section-header">
+          <div class="floating-wave-pill">
+            <i class="fa-solid fa-circle-question"></i>
+            <span>Architecture FAQ</span>
+          </div>
+          <h2>Frequently Addressed <span class="gradient-text">Questions</span></h2>
+          <p>Everything you need to know about our engagement models, security standards, and intellectual property.</p>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <!-- FAQ 1 -->
+          <div class="faq-accordion-item wave-card" style="padding: 24px; cursor: pointer;">
+            <div class="faq-accordion-title" style="display: flex; justify-content: space-between; align-items: center;">
+              <h4 style="font-size: 1.1rem; color: var(--text-main); margin: 0;">How fast can a XIPHIAS engineering team deploy to our project?</h4>
+              <i class="fa-solid fa-chevron-down" style="color: var(--neon-cyan);"></i>
+            </div>
+            <p style="margin-top: 14px; margin-bottom: 0; color: var(--text-muted); font-size: 0.95rem;">
+              Our dedicated squads can mobilize within 7 business days following an architecture deep-dive. We immediately integrate with your Git repositories, CI/CD pipelines, and communication channels.
+            </p>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-accordion-item wave-card" style="padding: 24px; cursor: pointer;">
+            <div class="faq-accordion-title" style="display: flex; justify-content: space-between; align-items: center;">
+              <h4 style="font-size: 1.1rem; color: var(--text-main); margin: 0;">Do you sign strict Enterprise NDAs and IP Assignment contracts?</h4>
+              <i class="fa-solid fa-chevron-down" style="color: var(--neon-cyan);"></i>
+            </div>
+            <p style="margin-top: 14px; margin-bottom: 0; color: var(--text-muted); font-size: 0.95rem;">
+              Yes, 100%. All intellectual property, code, neural weights, and architectural documentation produced belong exclusively to your organization. Mutual NDAs are executed prior to any technical disclosure.
+            </p>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-accordion-item wave-card" style="padding: 24px; cursor: pointer;">
+            <div class="faq-accordion-title" style="display: flex; justify-content: space-between; align-items: center;">
+              <h4 style="font-size: 1.1rem; color: var(--text-main); margin: 0;">Can XiphiasOS deploy inside our isolated, private VPCs?</h4>
+              <i class="fa-solid fa-chevron-down" style="color: var(--neon-cyan);"></i>
+            </div>
+            <p style="margin-top: 14px; margin-bottom: 0; color: var(--text-muted); font-size: 0.95rem;">
+              Yes. XiphiasOS supports fully air-gapped on-premise installations as well as private VPC deployments inside your dedicated AWS GovCloud, Azure Government, or Google Cloud sovereign zones.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-logo">
+              <div class="brand-wave-icon"><i class="fa-solid fa-water"></i></div>
+              <span>XIPHIAS<span class="gradient-text">.TECH</span></span>
+            </a>
+            <p>Empowering global enterprises with fluid 3D software architectures, cloud intelligence, and autonomous zero-trust security.</p>
+            <div class="footer-socials">
+              <a href="#" class="social-circle" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" class="social-circle" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" class="social-circle" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home Overview</a></li>
+              <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> IT Services</a></li>
+              <li><a href="products.html"><i class="fa-solid fa-chevron-right"></i> Flagship Platforms</a></li>
+              <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> Company & Labs</a></li>
+              <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact & Support</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Direct Telemetry</h4>
+            <ul class="footer-links">
+              <li><a href="mailto:architecture@xiphias.tech"><i class="fa-solid fa-envelope"></i> architecture@xiphias.tech</a></li>
+              <li><a href="tel:+18004929474"><i class="fa-solid fa-phone"></i> +1 (800) 492-XIPHIAS</a></li>
+              <li><a href="#"><i class="fa-solid fa-lock"></i> PGP Fingerprint Verified</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Enterprise Consultation</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 16px;">We respond to all verified enterprise inquiries in under 120 minutes.</p>
+            <a href="#xiphias-contact-form" class="btn-wave" style="width: 100%;">
+              <span>Jump To Form</span>
+              <i class="fa-solid fa-arrow-up"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; 2026 XIPHIAS Software Technologies Inc. All rights reserved.</p>
+        <p>Engineered with 3D WebGL, Modern CSS & Zero Regressions.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/wave3d.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

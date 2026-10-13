@@ -1,0 +1,12 @@
+{
+  "name": "xiphias-3d-website",
+  "version": "1.0.0",
+  "description": "XIPHIAS - 3D IT Software Company Website with Fluid Wave Aesthetics",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve -l 3000 ."
+  },
+  "keywords": ["threejs", "3d", "software", "it-company", "wave-design"],
+  "author": "Xiphias Engineering",
+  "license": "MIT"
+}

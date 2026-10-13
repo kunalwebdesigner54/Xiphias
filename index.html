@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XIPHIAS | Next-Gen 3D IT Software & Cloud Enterprise</title>
+  <meta name="description" content="XIPHIAS crafts hyper-scalable enterprise cloud software, AI automation pipelines, and zero-trust cybersecurity architectures with 3D fluid innovation.">
+  
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css?v=2.2">
+  <link rel="stylesheet" href="css/responsive.css?v=2.2">
+</head>
+<body>
+
+  <!-- Interactive 3D WebGL Undulating Wave Background -->
+  <canvas id="webgl-wave-canvas"></canvas>
+  <div class="ambient-glow-grid"></div>
+
+  <div class="content-wrapper">
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+      <div class="container header-container">
+        <a href="index.html" class="brand-logo">
+          <div class="brand-wave-icon">
+            <i class="fa-solid fa-water"></i>
+          </div>
+          <span>XIPHIAS<span class="gradient-text">.TECH</span></span>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="header-actions">
+          <a href="contact.html" class="btn-wave">
+            <span>Consult Architects</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <button class="mobile-toggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Full-Screen 3D Cinematic Scroll Experience (Apple-Style Product Storytelling) -->
+    <section class="cinematic-scroll-track" id="cinematicScrollTrack">
+      <div class="cinematic-sticky-stage" id="cinematicStage">
+        
+        <!-- Full-Screen Cinematic Video (banner-video.mp4) -->
+        <video 
+          class="cinematic-bg-video active" 
+          id="cinematicBannerVideo" 
+          src="videos/banner-video.mp4" 
+          poster="images/img-1.png"
+          muted 
+          playsinline 
+          preload="auto"
+          aria-label="XIPHIAS Cinematic Brand Film">
+        </video>
+
+        <!-- Subtle Dark Navy Gradient Overlays for High-Contrast Text Legibility -->
+        <div class="cinematic-overlay-vignette"></div>
+
+        <!-- Scroll Indicator & Playhead Progress Bar -->
+        <div class="cinematic-progress-bar-wrap">
+          <div class="cinematic-progress-bar" id="cinematicProgressBar"></div>
+        </div>
+
+        <div class="cinematic-status-chip">
+          <span class="chip-dot"></span>
+          <span id="cinematicPhaseLabel">PHASE 01 // X-CHIP CORE ACTIVATION</span>
+        </div>
+
+        <div class="cinematic-scroll-indicator" id="cinematicScrollHint">
+          <span>SCROLL TO EXPLORE STORY</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+
+        <!-- Dynamic Content Overlays (Mapped to Cinematic Video Scroll Chapters) -->
+        <div class="cinematic-content-container">
+
+          <!-- Chapter 1 (0% - 25% scroll): Main Hero Announcement -->
+          <div class="cinematic-story-layer active" id="storyLayer1">
+            <div class="story-content-left">
+              <div class="cinematic-eyebrow">
+                <span class="eyebrow-line"></span>
+                <span>NEXT-GEN DIGITAL ENGINEERING</span>
+              </div>
+              <h1 class="cinematic-headline">
+                Architecting <br>
+                <span class="gradient-text-cinematic">Fluid Digital Realities.</span>
+              </h1>
+              <p class="cinematic-supporting">
+                XIPHIAS builds intelligent software, scalable digital platforms, and future-ready technology experiences for ambitious businesses.
+              </p>
+              <div class="cinematic-cta-group">
+                <a href="services.html" class="btn-cinematic-primary">
+                  <span>Explore Solutions</span>
+                  <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="products.html" class="btn-cinematic-secondary">
+                  <i class="fa-solid fa-cubes"></i>
+                  <span>Discover Our Work</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapter 2 (25% - 55% scroll): Hyper-Resilient Cloud Architecture -->
+          <div class="cinematic-story-layer" id="storyLayer2">
+            <div class="story-content-left">
+              <div class="cinematic-eyebrow">
+                <span class="eyebrow-line"></span>
+                <span>AUTONOMOUS INFRASTRUCTURE</span>
+              </div>
+              <h2 class="cinematic-sub-headline">
+                From Quantum Silicon to <br>
+                <span class="gradient-text-cinematic">Global Cloud Metropolis.</span>
+              </h2>
+              <p class="cinematic-supporting">
+                Hyper-resilient microservices and automated deployment meshes engineered to scale effortlessly from regional clusters to planet-scale traffic.
+              </p>
+              <div class="cinematic-metrics">
+                <div class="metric-pill">
+                  <strong>99.999%</strong>
+                  <span>Uptime SLA</span>
+                </div>
+                <div class="metric-pill">
+                  <strong>&lt; 5ms</strong>
+                  <span>Edge Latency</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapter 3 (55% - 85% scroll): Unified Ecosystem Across All Screens -->
+          <div class="cinematic-story-layer" id="storyLayer3">
+            <div class="story-content-left">
+              <div class="cinematic-eyebrow">
+                <span class="eyebrow-line"></span>
+                <span>MULTI-DEVICE ECOSYSTEM</span>
+              </div>
+              <h2 class="cinematic-sub-headline">
+                Seamless Experiences <br>
+                <span class="gradient-text-cinematic">Across Every Screen.</span>
+              </h2>
+              <p class="cinematic-supporting">
+                Desktop, mobile, tablet, and enterprise terminals synchronize in real time with end-to-end zero-trust encryption and fluid 3D interactions.
+              </p>
+              <div class="cinematic-badges-row">
+                <span class="cinematic-tech-badge"><i class="fa-solid fa-desktop"></i> Enterprise Web</span>
+                <span class="cinematic-tech-badge"><i class="fa-solid fa-mobile-screen"></i> Native Apps</span>
+                <span class="cinematic-tech-badge"><i class="fa-solid fa-cloud"></i> Cloud Mesh</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chapter 4 (85% - 100% scroll): Brand Reveal & Action -->
+          <div class="cinematic-story-layer" id="storyLayer4">
+            <div class="story-content-left">
+              <div class="cinematic-eyebrow">
+                <span class="eyebrow-line"></span>
+                <span>BUILDING A BRIGHTER DIGITAL TOMORROW</span>
+              </div>
+              <h2 class="cinematic-brand-headline">
+                Empowering Global Enterprises <br>
+                <span class="gradient-text-cinematic">With XIPHIAS Innovation.</span>
+              </h2>
+              <div class="cinematic-cta-group">
+                <a href="contact.html" class="btn-cinematic-primary">
+                  <span>Consult Our Architects</span>
+                  <i class="fa-solid fa-chevron-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Wavy Divider 1 -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C150,90 350,-40 500,60 C650,160 900,10 1200,40 L1200,120 L0,120 Z" class="wave-fill-primary"></path>
+        <path d="M0,0 C150,90 350,-40 500,60 C650,160 900,10 1200,40" fill="none" class="wave-glow-stroke"></path>
+      </svg>
+    </div>
+
+    <!-- Section 2: Luxury Editorial Sticky Showcase (Apple/Bloom Style) -->
+    <section class="editorial-showcase-section" id="editorialShowcaseSection">
+      <div class="editorial-showcase-container">
+        
+        <!-- Left: Sticky Visual Column (Changes image on chapter scroll) -->
+        <div class="editorial-sticky-media-col">
+          <div class="editorial-media-frame">
+            <div class="editorial-brand-watermark">XIPHIAS</div>
+            
+            <div class="editorial-image-stack">
+              <img src="images/showcase-1.jpg" alt="X-Chip Quantum Silicon" class="editorial-showcase-img active" id="showcaseImg1" loading="lazy">
+              <img src="images/showcase-2.jpg" alt="Neural Cloud Mesh Network" class="editorial-showcase-img" id="showcaseImg2" loading="lazy">
+              <img src="images/showcase-3.jpg" alt="Global Cyber Metropolis" class="editorial-showcase-img" id="showcaseImg3" loading="lazy">
+              <img src="images/showcase-4.jpg" alt="Zero-Trust Shield Core" class="editorial-showcase-img" id="showcaseImg4" loading="lazy">
+            </div>
+
+            <!-- Ambient Glass Reflections & Glow -->
+            <div class="editorial-media-ambient-glow"></div>
+            <div class="editorial-media-glass-edge"></div>
+          </div>
+        </div>
+
+        <!-- Right: Text Stories Sliding Upwards on Scroll -->
+        <div class="editorial-scroll-story-col">
+          
+          <!-- Chapter 1 -->
+          <article class="editorial-story-card active" data-index="0" id="editorialStory1">
+            <div class="editorial-step-meta">01 / ARCHITECTURE</div>
+            <h2 class="editorial-story-title">THE CORE</h2>
+            <p class="editorial-story-desc">
+              Custom quantum silicon logic transforms monolithic codebases into hyper-threaded micro-execution engines. Zero latency, immaculate mathematical precision, engineered for next-generation computing.
+            </p>
+            <div class="editorial-story-action">
+              <a href="services.html" class="btn-editorial-pill">
+                <span>EXPLORE ARCHITECTURE</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Chapter 2 -->
+          <article class="editorial-story-card" data-index="1" id="editorialStory2">
+            <div class="editorial-step-meta">02 / INFRASTRUCTURE</div>
+            <h2 class="editorial-story-title">THE FABRIC</h2>
+            <p class="editorial-story-desc">
+              Adaptive multi-cloud Kubernetes mesh with real-time neural load distribution. Self-healing node clusters that rebalance planet-scale traffic waves with zero dropped packets and 99.999% SLA.
+            </p>
+            <div class="editorial-story-action">
+              <a href="services.html" class="btn-editorial-pill">
+                <span>INSPECT MESH</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Chapter 3 -->
+          <article class="editorial-story-card" data-index="2" id="editorialStory3">
+            <div class="editorial-step-meta">03 / MANUFACTURE</div>
+            <h2 class="editorial-story-title">THE FORM</h2>
+            <p class="editorial-story-desc">
+              From quantum circuits to interconnected global smart metropolises. Digital architectures seamlessly woven into physical operations, powering real-time logistics, finance, and industrial ecosystems.
+            </p>
+            <div class="editorial-story-action">
+              <a href="products.html" class="btn-editorial-pill">
+                <span>DISCOVER ECOSYSTEM</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Chapter 4 -->
+          <article class="editorial-story-card" data-index="3" id="editorialStory4">
+            <div class="editorial-step-meta">04 / APPLICATION</div>
+            <h2 class="editorial-story-title">THE FINISH</h2>
+            <p class="editorial-story-desc">
+              One continuous motion from pickup to production deployment. Delivers weightless zero-trust cyber coverage and military-grade encryption that fuses with enterprise workflows for all-day confidence.
+            </p>
+            <div class="editorial-story-action">
+              <a href="contact.html" class="btn-editorial-pill">
+                <span>CONNECT WITH ARCHITECTS</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Wavy Divider 2 -->
+    <div class="wave-divider wave-divider-top">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C200,100 450,-30 700,70 C950,170 1100,20 1200,60 L1200,120 L0,120 Z" class="wave-fill-surface"></path>
+        <path d="M0,0 C200,100 450,-30 700,70 C950,170 1100,20 1200,60" fill="none" class="wave-glow-stroke"></path>
+      </svg>
+    </div>
+
+    <!-- Realistic Engineering Showcase Section -->
+    <section class="section-padding" style="background: var(--bg-tertiary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="floating-wave-pill">
+            <i class="fa-solid fa-people-group"></i>
+            <span>Human & Machine Synergy</span>
+          </div>
+          <h2>Built by Elite Engineers in <span class="gradient-text">World-Class Tech Hubs</span></h2>
+          <p>Peek inside our high-velocity development sprints where state-of-the-art software is stress-tested before deployment.</p>
+        </div>
+
+        <div class="card-grid-3">
+          <div class="photo-wave-card">
+            <div class="photo-card-img">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="XIPHIAS Software Architects in Sprint">
+              <span class="photo-card-tag">AGILE LABS</span>
+            </div>
+            <div class="photo-card-body">
+              <h3>Collaborative Sprint Hubs</h3>
+              <p>Continuous pair programming and architectural reviews ensure zero technical debt from inception.</p>
+              <a href="about.html" class="card-link">Meet The Team <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="photo-wave-card">
+            <div class="photo-card-img">
+              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="AI Neural Model Training">
+              <span class="photo-card-tag">AI COGNITION</span>
+            </div>
+            <div class="photo-card-body">
+              <h3>Deep Neural Research</h3>
+              <p>Specialized engineers building deterministic machine learning guards for enterprise compliance.</p>
+              <a href="services.html" class="card-link">Explore AI Lab <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="photo-wave-card">
+            <div class="photo-card-img">
+              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity Mission Control">
+              <span class="photo-card-tag">DEFENSE GRID</span>
+            </div>
+            <div class="photo-card-body">
+              <h3>24/7 Threat Telemetry</h3>
+              <p>Global security operations center analyzing over 12 billion events daily across our cloud clients.</p>
+              <a href="contact.html" class="card-link">Request Audit <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wavy Divider 3 -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C300,120 600,-40 900,80 C1050,140 1150,40 1200,60 L1200,120 L0,120 Z" class="wave-fill-primary"></path>
+        <path d="M0,0 C300,120 600,-40 900,80 C1050,140 1150,40 1200,60" fill="none" class="wave-glow-stroke"></path>
+      </svg>
+    </div>
+
+    <!-- High-Impact Enterprise CTA Banner -->
+    <section class="section-padding" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.08), rgba(124, 58, 237, 0.12)); border: 1px solid rgba(2, 132, 199, 0.25); border-radius: 40px 14px 40px 14px; padding: 60px 40px; text-align: center; box-shadow: 0 15px 40px rgba(15, 23, 42, 0.06); position: relative; overflow: hidden;">
+          <h2 style="font-size: clamp(2.2rem, 3.8vw, 3.2rem); margin-bottom: 20px;">
+            Ready to Accelerate Your <span class="gradient-text">Software Velocity?</span>
+          </h2>
+          <p style="color: var(--text-muted); max-width: 680px; margin: 0 auto 36px auto; font-size: 1.1rem;">
+            Join over 120 global tech enterprises powered by XIPHIAS. Schedule a confidential architectural audit with our Principal Engineers today.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <a href="contact.html" class="btn-wave">
+              <i class="fa-solid fa-calendar-check"></i>
+              <span>Schedule Architecture Audit</span>
+            </a>
+            <a href="products.html" class="btn-wave-outline">
+              <i class="fa-solid fa-calculator"></i>
+              <span>Estimate Cloud ROI</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="brand-logo">
+              <div class="brand-wave-icon"><i class="fa-solid fa-water"></i></div>
+              <span>XIPHIAS<span class="gradient-text">.TECH</span></span>
+            </a>
+            <p>Empowering global enterprises with fluid 3D software architectures, cloud intelligence, and autonomous zero-trust security.</p>
+            <div class="footer-socials">
+              <a href="#" class="social-circle" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="#" class="social-circle" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" class="social-circle" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="#" class="social-circle" aria-label="Discord"><i class="fa-brands fa-discord"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home Overview</a></li>
+              <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> IT Services</a></li>
+              <li><a href="products.html"><i class="fa-solid fa-chevron-right"></i> Flagship Platforms</a></li>
+              <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> Company & Labs</a></li>
+              <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact & Support</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Solutions</h4>
+            <ul class="footer-links">
+              <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Cloud & K8s Fabric</a></li>
+              <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Enterprise AI Agents</a></li>
+              <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> Zero-Trust Defense</a></li>
+              <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i> High-Throughput APIs</a></li>
+              <li><a href="products.html"><i class="fa-solid fa-chevron-right"></i> ROI Calculator</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Wave Dispatch</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 12px;">Get our monthly deep-dive on distributed systems & 3D WebGL architectures.</p>
+            <form class="newsletter-form">
+              <input type="email" class="newsletter-input" placeholder="corporate@email.com" required>
+              <button type="submit" class="newsletter-btn"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; 2026 XIPHIAS Software Technologies Inc. All rights reserved.</p>
+        <p>Engineered with 3D WebGL, Modern CSS & Zero Regressions.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="js/wave3d.js"></script>
+  <script src="js/main.js?v=2.2"></script>
+</body>
+</html>
