@@ -209,24 +209,30 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    let isReadyTriggered = false;
     function onVideoReady() {
+      if (isReadyTriggered && videoDuration > 0) return;
       if (bannerVideo.duration && !isNaN(bannerVideo.duration)) {
         videoDuration = bannerVideo.duration;
+        isReadyTriggered = true;
       } else {
         videoDuration = 15;
       }
       try {
         bannerVideo.pause();
-        bannerVideo.currentTime = 0.001;
+        if (bannerVideo.currentTime === 0) {
+          bannerVideo.currentTime = 0.001;
+        }
       } catch (e) {}
       onScroll();
     }
 
     if (bannerVideo.readyState >= 1) {
       onVideoReady();
-    } else {
-      bannerVideo.addEventListener('loadedmetadata', onVideoReady, { once: true });
     }
+    bannerVideo.addEventListener('loadedmetadata', onVideoReady);
+    bannerVideo.addEventListener('loadeddata', onVideoReady);
+    bannerVideo.addEventListener('canplay', onVideoReady);
 
     // Coordinated rAF frame loop: avoids layout thrashing and dropped seeks
     function renderFrame() {
