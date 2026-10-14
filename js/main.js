@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
     checkEditorialScroll();
   }
 
-  // 10. Section 3: Featured Works Scroll-Driven Slideshow Controller
+  // 10. Section 3: Featured Works Scroll-Driven Slideshow Controller (2-Box Crisp Showcase)
   const worksSection = document.getElementById('worksShowcaseSection');
   const worksTrack = document.getElementById('worksSlideshowTrack');
 
@@ -388,14 +388,30 @@ document.addEventListener('DOMContentLoaded', () => {
       // Clamp progress strictly between 0 and 1
       const progress = Math.min(1, Math.max(0, scrolled / scrollDist));
 
-      // Calculate max horizontal travel distance inside the contained viewport
+      // Calculate the exact 2-card slide shift distance (viewport width + gap)
       const viewportEl = worksTrack.parentElement;
-      const viewportWidth = viewportEl ? viewportEl.offsetWidth : window.innerWidth * 0.65;
-      const trackWidth = worksTrack.scrollWidth;
-      const maxTranslate = Math.max(0, trackWidth - viewportWidth);
+      const viewportWidth = viewportEl ? viewportEl.offsetWidth : 800;
+      const gap = 20;
+      const slideShift = viewportWidth + gap;
 
-      const currentX = -(progress * maxTranslate);
-      worksTrack.style.transform = `translate3d(${currentX.toFixed(2)}px, 0, 0)`;
+      // Discrete, smooth 2-box step:
+      // Slide 0: Pair 1 [Card 0, Card 1] in full 100% view (progress < 0.45)
+      // Slide 1: Pair 2 [Card 2, Card 3] in full 100% view (progress >= 0.45)
+      const targetSlide = progress >= 0.45 ? 1 : 0;
+      const targetX = -(targetSlide * slideShift);
+
+      worksTrack.style.transform = `translate3d(${targetX.toFixed(2)}px, 0, 0)`;
+
+      // Active state highlight on cards
+      const cards = worksTrack.querySelectorAll('.works-slide-card');
+      cards.forEach((card, idx) => {
+        const isCurrentPair = (targetSlide === 0 && idx < 2) || (targetSlide === 1 && idx >= 2);
+        if (isCurrentPair) {
+          card.classList.add('active');
+        } else {
+          card.classList.remove('active');
+        }
+      });
     }
 
     function onWorksScroll() {
