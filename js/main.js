@@ -363,5 +363,52 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', checkEditorialScroll, { passive: true });
     checkEditorialScroll();
   }
+
+  // 10. Section 3: Pinned Horizontal Scroll Gallery Controller (Nexus Style)
+  const gallerySection = document.getElementById('pinnedGallerySection');
+  const galleryTrack = document.getElementById('pinnedGalleryTrack');
+
+  if (gallerySection && galleryTrack) {
+    let galleryRaf = false;
+
+    function renderHorizontalScroll() {
+      galleryRaf = false;
+
+      // Only execute pinned horizontal translation on desktop/large screens
+      if (window.innerWidth <= 1024) {
+        galleryTrack.style.transform = 'none';
+        return;
+      }
+
+      const rect = gallerySection.getBoundingClientRect();
+      const scrollDist = gallerySection.offsetHeight - window.innerHeight;
+      if (scrollDist <= 0) return;
+
+      const scrolled = -rect.top;
+      // Clamp progress strictly between 0 and 1
+      const progress = Math.min(1, Math.max(0, scrolled / scrollDist));
+
+      // Calculate max horizontal travel distance of track inside viewport
+      const viewportEl = galleryTrack.parentElement;
+      const viewportWidth = viewportEl ? viewportEl.offsetWidth : window.innerWidth * 0.6;
+      const trackWidth = galleryTrack.scrollWidth;
+      const maxTranslate = Math.max(0, trackWidth - viewportWidth + (window.innerWidth * 0.05));
+
+      const currentX = -(progress * maxTranslate);
+      galleryTrack.style.transform = `translate3d(${currentX.toFixed(2)}px, 0, 0)`;
+    }
+
+    function onGalleryScroll() {
+      if (!galleryRaf) {
+        galleryRaf = true;
+        requestAnimationFrame(renderHorizontalScroll);
+      }
+    }
+
+    window.addEventListener('scroll', onGalleryScroll, { passive: true });
+    window.addEventListener('resize', onGalleryScroll, { passive: true });
+    setTimeout(renderHorizontalScroll, 150);
+  }
 });
+
 

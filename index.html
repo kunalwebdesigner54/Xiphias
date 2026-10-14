@@ -296,55 +296,179 @@
       </svg>
     </div>
 
-    <!-- Realistic Engineering Showcase Section -->
-    <section class="section-padding" style="background: var(--bg-tertiary);">
-      <div class="container">
-        <div class="section-header">
-          <div class="floating-wave-pill">
-            <i class="fa-solid fa-people-group"></i>
-            <span>Human & Machine Synergy</span>
+    <!-- Section 3: Pinned Horizontal Scroll Gallery (Nexus Style) -->
+    <section class="pinned-gallery-section" id="pinnedGallerySection">
+      <div class="pinned-gallery-sticky">
+        
+        <!-- Left Fixed Ambient Intro -->
+        <div class="pinned-gallery-header">
+          <div class="gallery-badge-row">
+            <span class="badge-icon"><i class="fa-solid fa-atom"></i></span>
+            <span class="badge-text">// PINNED GALLERY // HORIZONTAL SCROLL SCENE 03</span>
           </div>
-          <h2>Built by Elite Engineers in <span class="gradient-text">World-Class Tech Hubs</span></h2>
-          <p>Peek inside our high-velocity development sprints where state-of-the-art software is stress-tested before deployment.</p>
+
+          <div class="gallery-headline-wrap">
+            <div class="gallery-sub">// FEATURED CASE STUDIES</div>
+            <h2 class="gallery-main-title">
+              <span>SELECT</span>
+              <span class="gradient-text">WORKS</span>
+            </h2>
+            <p class="gallery-desc">
+              Drag or scroll horizontally through our award-winning case studies. Click any project to open full technical specifications.
+            </p>
+          </div>
+
+          <div class="gallery-scroll-hint">
+            <div class="scroll-mouse-icon">
+              <div class="scroll-wheel"></div>
+            </div>
+            <span>SCROLL TO EXPLORE</span>
+          </div>
         </div>
 
-        <div class="card-grid-3">
-          <div class="photo-wave-card">
-            <div class="photo-card-img">
-              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="XIPHIAS Software Architects in Sprint">
-              <span class="photo-card-tag">AGILE LABS</span>
-            </div>
-            <div class="photo-card-body">
-              <h3>Collaborative Sprint Hubs</h3>
-              <p>Continuous pair programming and architectural reviews ensure zero technical debt from inception.</p>
-              <a href="about.html" class="card-link">Meet The Team <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
+        <!-- Horizontal Sliding Track of Cyberpunk Tech Cards -->
+        <div class="pinned-gallery-viewport">
+          <div class="pinned-gallery-track" id="pinnedGalleryTrack">
 
-          <div class="photo-wave-card">
-            <div class="photo-card-img">
-              <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="AI Neural Model Training">
-              <span class="photo-card-tag">AI COGNITION</span>
-            </div>
-            <div class="photo-card-body">
-              <h3>Deep Neural Research</h3>
-              <p>Specialized engineers building deterministic machine learning guards for enterprise compliance.</p>
-              <a href="services.html" class="card-link">Explore AI Lab <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-          </div>
+            <!-- Card 01: PROJECT OMEGA -->
+            <article class="cyber-project-card">
+              <div class="card-grid-backdrop"></div>
+              <div class="card-ambient-cyan-glow"></div>
+              
+              <div class="card-top-bar">
+                <span class="card-category-pill">SPATIAL WEBGL / THREE.JS</span>
+                <span class="card-release-meta">RELEASE: 2026</span>
+              </div>
 
-          <div class="photo-wave-card">
-            <div class="photo-card-img">
-              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity Mission Control">
-              <span class="photo-card-tag">DEFENSE GRID</span>
-            </div>
-            <div class="photo-card-body">
-              <h3>24/7 Threat Telemetry</h3>
-              <p>Global security operations center analyzing over 12 billion events daily across our cloud clients.</p>
-              <a href="contact.html" class="card-link">Request Audit <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+              <div class="card-project-num">PROJECT #01</div>
+              <h3 class="card-title-glitch">PROJECT<br>OMEGA</h3>
+              <p class="card-tagline">AUTONOMOUS WEBGL METAVERSE PLATFORM</p>
+
+              <div class="card-tech-badges">
+                <span class="tech-pill">Three.js</span>
+                <span class="tech-pill">React</span>
+                <span class="tech-pill">GLSL Shaders</span>
+                <span class="tech-pill">WebRTC</span>
+              </div>
+
+              <div class="card-footer-metrics">
+                <div class="metric-group">
+                  <span class="metric-indicator live-pulse"></span>
+                  <span class="metric-label">2.4M ACTIVE VISITORS</span>
+                  <span class="metric-sep">•</span>
+                  <span class="metric-label">60 FPS STABLE</span>
+                </div>
+                <a href="products.html" class="card-action-circle" aria-label="View Project Omega Case Study">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 02: CYBER-KINETIC -->
+            <article class="cyber-project-card">
+              <div class="card-grid-backdrop"></div>
+              <div class="card-ambient-cyan-glow"></div>
+              
+              <div class="card-top-bar">
+                <span class="card-category-pill">CREATIVE FRONTEND FLEX</span>
+                <span class="card-release-meta">RELEASE: 2026</span>
+              </div>
+
+              <div class="card-project-num">PROJECT #02</div>
+              <h3 class="card-title-glitch">CYBER-<br>KINETIC</h3>
+              <p class="card-tagline">NEXT-GEN CYBERPUNK INTERFACE SUITE</p>
+
+              <div class="card-tech-badges">
+                <span class="tech-pill">Next.js</span>
+                <span class="tech-pill">GSAP Scroll</span>
+                <span class="tech-pill">Tailwind</span>
+                <span class="tech-pill">Canvas</span>
+              </div>
+
+              <div class="card-footer-metrics">
+                <div class="metric-group">
+                  <span class="metric-indicator award-pulse"></span>
+                  <span class="metric-label">FWA SITE OF THE DAY</span>
+                  <span class="metric-sep">•</span>
+                  <span class="metric-label">AWWWARDS WINNER</span>
+                </div>
+                <a href="services.html" class="card-action-circle" aria-label="View Cyber-Kinetic Case Study">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 03: NEURAL MESH -->
+            <article class="cyber-project-card">
+              <div class="card-grid-backdrop"></div>
+              <div class="card-ambient-cyan-glow"></div>
+              
+              <div class="card-top-bar">
+                <span class="card-category-pill">DISTRIBUTED CLOUD / K8S</span>
+                <span class="card-release-meta">RELEASE: 2026</span>
+              </div>
+
+              <div class="card-project-num">PROJECT #03</div>
+              <h3 class="card-title-glitch">NEURAL<br>MESH</h3>
+              <p class="card-tagline">SELF-HEALING HYPERCLOUD ARCHITECTURE</p>
+
+              <div class="card-tech-badges">
+                <span class="tech-pill">Kubernetes</span>
+                <span class="tech-pill">Rust</span>
+                <span class="tech-pill">gRPC</span>
+                <span class="tech-pill">Kafka</span>
+              </div>
+
+              <div class="card-footer-metrics">
+                <div class="metric-group">
+                  <span class="metric-indicator live-pulse"></span>
+                  <span class="metric-label">99.999% SLA UPTIME</span>
+                  <span class="metric-sep">•</span>
+                  <span class="metric-label">&lt; 3ms LATENCY</span>
+                </div>
+                <a href="services.html" class="card-action-circle" aria-label="View Neural Mesh Case Study">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 04: QUANTUM VAULT -->
+            <article class="cyber-project-card">
+              <div class="card-grid-backdrop"></div>
+              <div class="card-ambient-cyan-glow"></div>
+              
+              <div class="card-top-bar">
+                <span class="card-category-pill">ZERO-TRUST CYBER DEFENSE</span>
+                <span class="card-release-meta">RELEASE: 2026</span>
+              </div>
+
+              <div class="card-project-num">PROJECT #04</div>
+              <h3 class="card-title-glitch">QUANTUM<br>VAULT</h3>
+              <p class="card-tagline">POST-QUANTUM CRYPTOGRAPHY ENCLAVE</p>
+
+              <div class="card-tech-badges">
+                <span class="tech-pill">Post-Quantum</span>
+                <span class="tech-pill">Wasm</span>
+                <span class="tech-pill">eBPF</span>
+                <span class="tech-pill">Go</span>
+              </div>
+
+              <div class="card-footer-metrics">
+                <div class="metric-group">
+                  <span class="metric-indicator shield-pulse"></span>
+                  <span class="metric-label">0-BREACH PROTOCOL</span>
+                  <span class="metric-sep">•</span>
+                  <span class="metric-label">SOC-2 TYPE II</span>
+                </div>
+                <a href="contact.html" class="card-action-circle" aria-label="View Quantum Vault Case Study">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+            </article>
+
           </div>
         </div>
+
       </div>
     </section>
 
