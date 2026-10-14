@@ -297,178 +297,157 @@
     </div>
 
     <!-- Section 3: Pinned Horizontal Scroll Gallery (Nexus Style) -->
-    <section class="pinned-gallery-section" id="pinnedGallerySection">
-      <div class="pinned-gallery-sticky">
-        
-        <!-- Left Fixed Ambient Intro -->
-        <div class="pinned-gallery-header">
-          <div class="gallery-badge-row">
-            <span class="badge-icon"><i class="fa-solid fa-atom"></i></span>
-            <span class="badge-text">// PINNED GALLERY // HORIZONTAL SCROLL SCENE 03</span>
-          </div>
-
-          <div class="gallery-headline-wrap">
-            <div class="gallery-sub">// FEATURED CASE STUDIES</div>
-            <h2 class="gallery-main-title">
-              <span>SELECT</span>
-              <span class="gradient-text">WORKS</span>
+    <!-- Section 3: Featured Works Scroll Slideshow -->
+    <section class="works-showcase-section" id="worksShowcaseSection">
+      <div class="works-sticky-stage">
+        <div class="works-showcase-container">
+          
+          <!-- Left Column: Heading + Paragraph Only -->
+          <div class="works-intro-col">
+            <h2 class="works-slider-title">
+              Select <span class="gradient-text">Works</span>
             </h2>
-            <p class="gallery-desc">
-              Drag or scroll horizontally through our award-winning case studies. Click any project to open full technical specifications.
+            <p class="works-slider-desc">
+              Explore our flagship digital engineering solutions, cloud native systems, and immersive web platforms engineered for world-class enterprises.
             </p>
           </div>
 
-          <div class="gallery-scroll-hint">
-            <div class="scroll-mouse-icon">
-              <div class="scroll-wheel"></div>
-            </div>
-            <span>SCROLL TO EXPLORE</span>
-          </div>
-        </div>
-
-        <!-- Horizontal Sliding Track of Cyberpunk Tech Cards -->
-        <div class="pinned-gallery-viewport">
-          <div class="pinned-gallery-track" id="pinnedGalleryTrack">
-
-            <!-- Card 01: PROJECT OMEGA -->
-            <article class="cyber-project-card">
-              <div class="card-grid-backdrop"></div>
-              <div class="card-ambient-cyan-glow"></div>
-              
-              <div class="card-top-bar">
-                <span class="card-category-pill">SPATIAL WEBGL / THREE.JS</span>
-                <span class="card-release-meta">RELEASE: 2026</span>
+        <!-- Right Column: Box Slideshow / Carousel -->
+        <div class="works-slideshow-viewport" id="worksSlideshowViewport">
+          <div class="works-slideshow-track" id="worksSlideshowTrack">
+            
+            <!-- Slide Box 01: PROJECT OMEGA -->
+            <article class="works-slide-card active" data-index="0">
+              <div class="slide-card-media">
+                <img src="images/project-omega.jpg" alt="Project Omega - Autonomous Spatial WebGL Platform" class="slide-card-img" loading="lazy">
+                <span class="slide-card-category">SPATIAL WEBGL / THREE.JS</span>
               </div>
-
-              <div class="card-project-num">PROJECT #01</div>
-              <h3 class="card-title-glitch">PROJECT<br>OMEGA</h3>
-              <p class="card-tagline">AUTONOMOUS WEBGL METAVERSE PLATFORM</p>
-
-              <div class="card-tech-badges">
-                <span class="tech-pill">Three.js</span>
-                <span class="tech-pill">React</span>
-                <span class="tech-pill">GLSL Shaders</span>
-                <span class="tech-pill">WebRTC</span>
-              </div>
-
-              <div class="card-footer-metrics">
-                <div class="metric-group">
-                  <span class="metric-indicator live-pulse"></span>
-                  <span class="metric-label">2.4M ACTIVE VISITORS</span>
-                  <span class="metric-sep">•</span>
-                  <span class="metric-label">60 FPS STABLE</span>
+              <div class="slide-card-body">
+                <div class="slide-card-meta">
+                  <span class="slide-project-num">PROJECT #01</span>
+                  <span class="slide-release-year">RELEASE: 2026</span>
                 </div>
-                <a href="products.html" class="card-action-circle" aria-label="View Project Omega Case Study">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
+                <h3 class="slide-card-title">PROJECT OMEGA</h3>
+                <p class="slide-card-tagline">Autonomous WebGL spatial metaverse platform featuring real-time 3D simulations and GPU-accelerated graphics.</p>
+                <div class="slide-card-tags">
+                  <span class="tech-pill">Three.js</span>
+                  <span class="tech-pill">React</span>
+                  <span class="tech-pill">GLSL Shaders</span>
+                  <span class="tech-pill">WebRTC</span>
+                </div>
+                <div class="slide-card-footer">
+                  <div class="slide-metric-group">
+                    <span class="metric-indicator live-pulse"></span>
+                    <span class="slide-metric-text">2.4M ACTIVE VISITORS</span>
+                  </div>
+                  <a href="products.html" class="slide-action-btn" aria-label="View Project Omega Case Study">
+                    <span>Explore</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
               </div>
             </article>
 
-            <!-- Card 02: CYBER-KINETIC -->
-            <article class="cyber-project-card">
-              <div class="card-grid-backdrop"></div>
-              <div class="card-ambient-cyan-glow"></div>
-              
-              <div class="card-top-bar">
-                <span class="card-category-pill">CREATIVE FRONTEND FLEX</span>
-                <span class="card-release-meta">RELEASE: 2026</span>
+            <!-- Slide Box 02: CYBER-KINETIC -->
+            <article class="works-slide-card" data-index="1">
+              <div class="slide-card-media">
+                <img src="images/project-cyber.jpg" alt="Cyber-Kinetic Interface Suite" class="slide-card-img" loading="lazy">
+                <span class="slide-card-category">CREATIVE FRONTEND & FINTECH</span>
               </div>
-
-              <div class="card-project-num">PROJECT #02</div>
-              <h3 class="card-title-glitch">CYBER-<br>KINETIC</h3>
-              <p class="card-tagline">NEXT-GEN CYBERPUNK INTERFACE SUITE</p>
-
-              <div class="card-tech-badges">
-                <span class="tech-pill">Next.js</span>
-                <span class="tech-pill">GSAP Scroll</span>
-                <span class="tech-pill">Tailwind</span>
-                <span class="tech-pill">Canvas</span>
-              </div>
-
-              <div class="card-footer-metrics">
-                <div class="metric-group">
-                  <span class="metric-indicator award-pulse"></span>
-                  <span class="metric-label">FWA SITE OF THE DAY</span>
-                  <span class="metric-sep">•</span>
-                  <span class="metric-label">AWWWARDS WINNER</span>
+              <div class="slide-card-body">
+                <div class="slide-card-meta">
+                  <span class="slide-project-num">PROJECT #02</span>
+                  <span class="slide-release-year">RELEASE: 2026</span>
                 </div>
-                <a href="services.html" class="card-action-circle" aria-label="View Cyber-Kinetic Case Study">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
+                <h3 class="slide-card-title">CYBER-KINETIC</h3>
+                <p class="slide-card-tagline">Next-generation cyberpunk trading terminal and interactive UI suite with high-frequency live data feeds.</p>
+                <div class="slide-card-tags">
+                  <span class="tech-pill">Next.js</span>
+                  <span class="tech-pill">GSAP Scroll</span>
+                  <span class="tech-pill">Tailwind</span>
+                  <span class="tech-pill">Canvas</span>
+                </div>
+                <div class="slide-card-footer">
+                  <div class="slide-metric-group">
+                    <span class="metric-indicator award-pulse"></span>
+                    <span class="slide-metric-text">FWA SITE OF THE DAY</span>
+                  </div>
+                  <a href="services.html" class="slide-action-btn" aria-label="View Cyber-Kinetic Case Study">
+                    <span>Explore</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
               </div>
             </article>
 
-            <!-- Card 03: NEURAL MESH -->
-            <article class="cyber-project-card">
-              <div class="card-grid-backdrop"></div>
-              <div class="card-ambient-cyan-glow"></div>
-              
-              <div class="card-top-bar">
-                <span class="card-category-pill">DISTRIBUTED CLOUD / K8S</span>
-                <span class="card-release-meta">RELEASE: 2026</span>
+            <!-- Slide Box 03: NEURAL MESH -->
+            <article class="works-slide-card" data-index="2">
+              <div class="slide-card-media">
+                <img src="images/project-neural.jpg" alt="Neural Mesh Hypercloud Architecture" class="slide-card-img" loading="lazy">
+                <span class="slide-card-category">DISTRIBUTED CLOUD / K8S</span>
               </div>
-
-              <div class="card-project-num">PROJECT #03</div>
-              <h3 class="card-title-glitch">NEURAL<br>MESH</h3>
-              <p class="card-tagline">SELF-HEALING HYPERCLOUD ARCHITECTURE</p>
-
-              <div class="card-tech-badges">
-                <span class="tech-pill">Kubernetes</span>
-                <span class="tech-pill">Rust</span>
-                <span class="tech-pill">gRPC</span>
-                <span class="tech-pill">Kafka</span>
-              </div>
-
-              <div class="card-footer-metrics">
-                <div class="metric-group">
-                  <span class="metric-indicator live-pulse"></span>
-                  <span class="metric-label">99.999% SLA UPTIME</span>
-                  <span class="metric-sep">•</span>
-                  <span class="metric-label">&lt; 3ms LATENCY</span>
+              <div class="slide-card-body">
+                <div class="slide-card-meta">
+                  <span class="slide-project-num">PROJECT #03</span>
+                  <span class="slide-release-year">RELEASE: 2026</span>
                 </div>
-                <a href="services.html" class="card-action-circle" aria-label="View Neural Mesh Case Study">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
+                <h3 class="slide-card-title">NEURAL MESH</h3>
+                <p class="slide-card-tagline">Self-healing hypercloud architecture connecting distributed microservices with dynamic traffic shaping.</p>
+                <div class="slide-card-tags">
+                  <span class="tech-pill">Kubernetes</span>
+                  <span class="tech-pill">Rust</span>
+                  <span class="tech-pill">gRPC</span>
+                  <span class="tech-pill">Kafka</span>
+                </div>
+                <div class="slide-card-footer">
+                  <div class="slide-metric-group">
+                    <span class="metric-indicator live-pulse"></span>
+                    <span class="slide-metric-text">99.999% SLA UPTIME</span>
+                  </div>
+                  <a href="services.html" class="slide-action-btn" aria-label="View Neural Mesh Case Study">
+                    <span>Explore</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
               </div>
             </article>
 
-            <!-- Card 04: QUANTUM VAULT -->
-            <article class="cyber-project-card">
-              <div class="card-grid-backdrop"></div>
-              <div class="card-ambient-cyan-glow"></div>
-              
-              <div class="card-top-bar">
-                <span class="card-category-pill">ZERO-TRUST CYBER DEFENSE</span>
-                <span class="card-release-meta">RELEASE: 2026</span>
+            <!-- Slide Box 04: QUANTUM VAULT -->
+            <article class="works-slide-card" data-index="3">
+              <div class="slide-card-media">
+                <img src="images/project-vault.jpg" alt="Quantum Vault Cryptography Enclave" class="slide-card-img" loading="lazy">
+                <span class="slide-card-category">ZERO-TRUST CYBER DEFENSE</span>
               </div>
-
-              <div class="card-project-num">PROJECT #04</div>
-              <h3 class="card-title-glitch">QUANTUM<br>VAULT</h3>
-              <p class="card-tagline">POST-QUANTUM CRYPTOGRAPHY ENCLAVE</p>
-
-              <div class="card-tech-badges">
-                <span class="tech-pill">Post-Quantum</span>
-                <span class="tech-pill">Wasm</span>
-                <span class="tech-pill">eBPF</span>
-                <span class="tech-pill">Go</span>
-              </div>
-
-              <div class="card-footer-metrics">
-                <div class="metric-group">
-                  <span class="metric-indicator shield-pulse"></span>
-                  <span class="metric-label">0-BREACH PROTOCOL</span>
-                  <span class="metric-sep">•</span>
-                  <span class="metric-label">SOC-2 TYPE II</span>
+              <div class="slide-card-body">
+                <div class="slide-card-meta">
+                  <span class="slide-project-num">PROJECT #04</span>
+                  <span class="slide-release-year">RELEASE: 2026</span>
                 </div>
-                <a href="contact.html" class="card-action-circle" aria-label="View Quantum Vault Case Study">
-                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </a>
+                <h3 class="slide-card-title">QUANTUM VAULT</h3>
+                <p class="slide-card-tagline">Post-quantum cryptography enclave securing critical enterprise datasets against quantum vectors.</p>
+                <div class="slide-card-tags">
+                  <span class="tech-pill">Post-Quantum</span>
+                  <span class="tech-pill">Wasm</span>
+                  <span class="tech-pill">eBPF</span>
+                  <span class="tech-pill">Go</span>
+                </div>
+                <div class="slide-card-footer">
+                  <div class="slide-metric-group">
+                    <span class="metric-indicator shield-pulse"></span>
+                    <span class="slide-metric-text">0-BREACH PROTOCOL</span>
+                  </div>
+                  <a href="contact.html" class="slide-action-btn" aria-label="View Quantum Vault Case Study">
+                    <span>Explore</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
               </div>
             </article>
 
           </div>
         </div>
 
+        </div>
       </div>
     </section>
 

@@ -231,25 +231,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #ffffff;
 }
 
-.nav-link {
-  color: rgba(241, 245, 249, 0.78);
-}
-
-.nav-link:hover {
-  color: #38bdf8;
-}
-
-.nav-link.active {
-  color: #ffffff !important;
-  font-weight: 700;
-  text-shadow: 0 0 12px rgba(255, 255, 255, 0.45);
-}
-
-.nav-link.active::after {
-  background: #ffffff;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 16px rgba(56, 189, 248, 0.6);
-}
-
 .header-container {
   display: flex;
   align-items: center;
@@ -299,15 +280,27 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 600;
-  color: var(--text-muted);
+  color: rgba(241, 245, 249, 0.72);
   transition: var(--transition-smooth);
   position: relative;
   padding: 6px 0;
 }
 
-.nav-link:hover,
-.nav-link.active {
-  color: #0f172a;
+.nav-link:hover {
+  color: #38bdf8;
+}
+
+/* Active Menu Link - Strictly Pure Crisp White */
+.site-header .nav-menu .nav-link.active,
+.site-header .nav-link.active,
+.nav-menu .nav-link.active,
+.nav-link.active,
+.site-header .nav-menu .nav-link.active:hover,
+.nav-link.active:hover {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  font-weight: 700 !important;
+  text-shadow: none !important;
 }
 
 .nav-link::after {
@@ -322,9 +315,17 @@ h1, h2, h3, h4, h5, h6 {
   transition: var(--transition-smooth);
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
+.nav-link:hover::after {
   width: 100%;
+}
+
+.site-header .nav-menu .nav-link.active::after,
+.site-header .nav-link.active::after,
+.nav-menu .nav-link.active::after,
+.nav-link.active::after {
+  width: 100% !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
 }
 
 .header-actions {
@@ -1016,326 +1017,228 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   SECTION 3: PINNED HORIZONTAL SCROLL GALLERY (NEXUS KINETIC LABS STYLE)
-   Pinned Viewport + Horizontal Translating Track with Cyberpunk Tech Cards
+   SECTION 3: FEATURED WORKS SCROLL SLIDESHOW
+   Clean Left Heading + Paragraph with Scroll-Driven Box Slideshow & Images
    ========================================================================== */
-.pinned-gallery-section {
+.works-showcase-section {
   position: relative;
   width: 100%;
-  height: 360vh; /* Scroll track runway for smooth horizontal scrubbing */
+  height: 280vh; /* Smooth, natural scroll runway */
   background: #030712;
   color: #ffffff;
-  overflow: clip;
+  overflow: visible;
 }
 
-.pinned-gallery-sticky {
+.works-sticky-stage {
   position: sticky;
   top: 0;
+  width: 100%;
   height: 100vh;
   height: 100dvh;
-  width: 100%;
   overflow: hidden;
   display: flex;
   align-items: center;
-  background: radial-gradient(circle at 10% 40%, rgba(2, 132, 199, 0.08) 0%, transparent 60%),
-              radial-gradient(circle at 90% 70%, rgba(124, 58, 237, 0.07) 0%, transparent 60%),
+  background: radial-gradient(circle at 12% 40%, rgba(2, 132, 199, 0.08) 0%, transparent 60%),
+              radial-gradient(circle at 88% 70%, rgba(124, 58, 237, 0.07) 0%, transparent 60%),
               #030712;
   padding: 0 4vw 0 6vw;
-  gap: 4vw;
 }
 
-/* Left Fixed Header / Headline */
-.pinned-gallery-header {
+.works-showcase-container {
+  width: 100%;
+  max-width: 1560px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: clamp(36px, 5vw, 76px);
+}
+
+/* Left Column: Heading + Paragraph Only */
+.works-intro-col {
   flex-shrink: 0;
-  width: 380px;
-  max-width: 32vw;
+  width: 360px;
+  max-width: 30vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  z-index: 15;
+  z-index: 10;
 }
 
-.gallery-badge-row {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: rgba(2, 132, 199, 0.12);
-  border: 1px solid rgba(2, 132, 199, 0.35);
-  margin-bottom: 24px;
-  width: fit-content;
-}
-
-.gallery-badge-row .badge-icon {
-  color: #38bdf8;
-  font-size: 0.85rem;
-  animation: spinSlow 12s linear infinite;
-}
-
-@keyframes spinSlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.gallery-badge-row .badge-text {
-  font-family: 'Space Grotesk', monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  color: #38bdf8;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.gallery-headline-wrap {
-  margin-bottom: 30px;
-}
-
-.gallery-sub {
-  font-family: 'Space Grotesk', monospace;
-  font-size: 0.82rem;
-  letter-spacing: 0.22em;
-  color: #00f0ff;
-  margin-bottom: 14px;
-  font-weight: 700;
-}
-
-.gallery-main-title {
+.works-slider-title {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(2.8rem, 4.5vw, 4.6rem);
+  font-size: clamp(2.4rem, 4.2vw, 3.8rem);
   font-weight: 800;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  color: #ffffff;
 }
 
-.gallery-main-title span {
-  display: block;
+.works-slider-title span {
+  display: inline-block;
 }
 
-.gallery-desc {
-  font-size: 0.96rem;
-  line-height: 1.65;
+.works-slider-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
   color: #94a3b8;
-  max-width: 320px;
+  margin-bottom: 0;
 }
 
-.gallery-scroll-hint {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-family: 'Space Grotesk', monospace;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  color: #64748b;
-  margin-top: 20px;
-}
-
-.scroll-mouse-icon {
-  width: 20px;
-  height: 32px;
-  border: 2px solid rgba(56, 189, 248, 0.4);
-  border-radius: 12px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.scroll-wheel {
-  width: 3px;
-  height: 6px;
-  background: #38bdf8;
-  border-radius: 2px;
-  margin-top: 6px;
-  animation: mouseWheel 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
-}
-
-@keyframes mouseWheel {
-  0% { transform: translateY(0); opacity: 1; }
-  100% { transform: translateY(12px); opacity: 0; }
-}
-
-/* Horizontal Viewport & Track */
-.pinned-gallery-viewport {
+/* Right Column: Viewport & Slideshow Track */
+.works-slideshow-viewport {
   flex-grow: 1;
   height: 100%;
   display: flex;
   align-items: center;
-  overflow: visible;
+  overflow: hidden;
   position: relative;
+  padding: 16px 0;
+  border-radius: 24px;
 }
 
-.pinned-gallery-track {
+.works-slideshow-track {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 32px;
   will-change: transform;
   transform: translate3d(0, 0, 0);
-  transition: transform 0.08s linear;
-  padding-right: 12vw;
+  transition: transform 0.06s linear;
+  padding-right: 40px;
 }
 
-/* Nexus Style Cyberpunk Tech Cards */
-.cyber-project-card {
+/* Slide Box Card - Flat, Sleek, NO SHADOWS */
+.works-slide-card {
   position: relative;
-  width: 540px;
-  min-width: 540px;
-  height: 520px;
+  width: 440px;
+  min-width: 440px;
   background: rgba(11, 17, 32, 0.94);
-  border-radius: 28px;
-  border: 1px solid rgba(0, 240, 255, 0.35);
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9), 0 0 35px rgba(0, 240, 255, 0.12);
-  padding: 38px 42px;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 240, 255, 0.28);
+  box-shadow: none !important;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.35s ease, border-color 0.35s ease;
   user-select: none;
 }
 
-.cyber-project-card:hover {
-  transform: translateY(-8px) scale(1.01);
+.works-slide-card:hover {
+  transform: translateY(-6px);
   border-color: rgba(0, 240, 255, 0.7);
-  box-shadow: 0 30px 70px -15px rgba(0, 0, 0, 0.95), 0 0 50px rgba(0, 240, 255, 0.25);
+  box-shadow: none !important;
 }
 
-/* Background Cyber Grid Pattern */
-.card-grid-backdrop {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image: 
-    linear-gradient(to right, rgba(0, 240, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
-  background-size: 28px 28px;
-  z-index: 1;
-  opacity: 0.75;
-}
-
-.card-ambient-cyan-glow {
-  position: absolute;
-  top: -40px;
-  right: -40px;
-  width: 220px;
+/* Image Wrap */
+.slide-card-media {
+  position: relative;
+  width: 100%;
   height: 220px;
-  background: radial-gradient(circle, rgba(0, 240, 255, 0.15) 0%, transparent 70%);
-  pointer-events: none;
+  overflow: hidden;
+  background: #0b1120;
+}
+
+.slide-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: block;
+}
+
+.works-slide-card:hover .slide-card-img {
+  transform: scale(1.06);
+}
+
+.slide-card-category {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  color: #00f0ff;
+  font-family: 'Space Grotesk', monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 5px 14px;
+  border-radius: 999px;
+  text-transform: uppercase;
   z-index: 2;
 }
 
-/* Card Header */
-.card-top-bar {
-  position: relative;
-  z-index: 5;
+/* Card Body */
+.slide-card-body {
+  padding: 26px 26px 22px 26px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.slide-card-meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.card-category-pill {
   font-family: 'Space Grotesk', monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  font-weight: 700;
-  color: #00f0ff;
-  padding: 5px 14px;
-  border-radius: 999px;
-  background: rgba(0, 240, 255, 0.08);
-  border: 1px solid rgba(0, 240, 255, 0.25);
-  text-transform: uppercase;
-}
-
-.card-release-meta {
-  font-family: 'Space Grotesk', monospace;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
+  font-size: 0.76rem;
+  letter-spacing: 0.16em;
   color: #64748b;
-  font-weight: 600;
-}
-
-.card-project-num {
-  position: relative;
-  z-index: 5;
-  font-family: 'Space Grotesk', monospace;
-  font-size: 0.85rem;
-  letter-spacing: 0.22em;
-  color: #64748b;
-  margin-top: 14px;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 
-/* Card Large Glitch Title */
-.card-title-glitch {
-  position: relative;
-  z-index: 5;
+.slide-card-title {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: clamp(2.6rem, 3.8vw, 3.4rem);
+  font-size: 1.45rem;
   font-weight: 800;
-  line-height: 1.0;
-  letter-spacing: -0.03em;
-  color: #00f0ff;
-  text-shadow: 0 0 20px rgba(0, 240, 255, 0.35);
-  margin: 12px 0 10px 0;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
   text-transform: uppercase;
 }
 
-.card-tagline {
-  position: relative;
-  z-index: 5;
-  font-family: 'Space Grotesk', monospace;
-  font-size: 0.82rem;
-  letter-spacing: 0.15em;
-  color: #cbd5e1;
-  text-transform: uppercase;
-  margin-bottom: 20px;
+.slide-card-tagline {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin-bottom: 18px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-/* Tech Badges */
-.card-tech-badges {
-  position: relative;
-  z-index: 5;
+/* Badges */
+.slide-card-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
-.tech-pill {
-  font-family: 'Space Grotesk', monospace;
-  font-size: 0.78rem;
-  color: #94a3b8;
-  background: rgba(15, 23, 42, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 6px 14px;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: all 0.25s ease;
-}
-
-.cyber-project-card:hover .tech-pill {
-  border-color: rgba(0, 240, 255, 0.3);
-  color: #e2e8f0;
-}
-
-/* Card Footer & Metrics */
-.card-footer-metrics {
-  position: relative;
-  z-index: 5;
+/* Footer / Action */
+.slide-card-footer {
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 12px;
 }
 
-.metric-group {
+.slide-metric-group {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+}
+
+.slide-metric-text {
   font-family: 'Space Grotesk', monospace;
-  font-size: 0.76rem;
+  font-size: 0.72rem;
   letter-spacing: 0.12em;
   color: #00f0ff;
   font-weight: 700;
@@ -1350,19 +1253,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .metric-indicator.live-pulse {
   background: #00f0ff;
-  box-shadow: 0 0 10px #00f0ff;
   animation: pulseCyan 1.8s infinite;
 }
 
 .metric-indicator.award-pulse {
   background: #a855f7;
-  box-shadow: 0 0 10px #a855f7;
   animation: pulsePurple 1.8s infinite;
 }
 
 .metric-indicator.shield-pulse {
   background: #10b981;
-  box-shadow: 0 0 10px #10b981;
   animation: pulseGreen 1.8s infinite;
 }
 
@@ -1381,64 +1281,86 @@ h1, h2, h3, h4, h5, h6 {
   50% { opacity: 0.4; transform: scale(0.8); }
 }
 
-.metric-sep {
-  color: #475569;
+.slide-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 240, 255, 0.08);
+  border: 1px solid rgba(0, 240, 255, 0.3);
+  color: #00f0ff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 8px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: none !important;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-/* Cyan Circular Action Trigger */
-.card-action-circle {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+.slide-action-btn:hover {
   background: #00f0ff;
   color: #030712;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  text-decoration: none;
-  box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
-  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+  box-shadow: none !important;
+  transform: translateY(-2px);
 }
 
-.cyber-project-card:hover .card-action-circle {
-  transform: scale(1.15) rotate(45deg);
-  box-shadow: 0 0 35px rgba(0, 240, 255, 0.8);
-}
-
-/* Responsive Handling for Mobile & Tablets */
+/* Responsive Rules */
 @media (max-width: 1024px) {
-  .pinned-gallery-section {
+  .works-showcase-section {
     height: auto;
     padding: 80px 20px;
+    overflow: visible;
   }
-  .pinned-gallery-sticky {
+  .works-sticky-stage {
     position: relative;
     height: auto;
-    flex-direction: column;
     padding: 0;
-    gap: 40px;
+    overflow: visible;
+    background: transparent;
   }
-  .pinned-gallery-header {
+  .works-showcase-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 36px;
+  }
+  .works-intro-col {
     width: 100%;
     max-width: 100%;
   }
-  .pinned-gallery-viewport {
+  .works-slideshow-viewport {
     width: 100%;
     overflow-x: auto;
-    padding-bottom: 20px;
+    padding-bottom: 16px;
     -webkit-overflow-scrolling: touch;
   }
-  .pinned-gallery-track {
+  .works-slideshow-track {
     transform: none !important;
     gap: 20px;
+    padding-right: 20px;
   }
-  .cyber-project-card {
-    width: 85vw;
-    min-width: 85vw;
-    height: auto;
-    min-height: 440px;
-    padding: 28px 24px;
+  .works-slide-card {
+    width: 82vw;
+    min-width: 82vw;
+    box-shadow: none !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .works-showcase-section {
+    padding: 60px 16px;
+  }
+  .works-slide-card {
+    width: 88vw;
+    min-width: 88vw;
+  }
+  .slide-card-media {
+    height: 195px;
+  }
+  .slide-card-body {
+    padding: 20px;
   }
 }
 

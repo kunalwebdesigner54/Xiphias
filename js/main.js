@@ -364,50 +364,50 @@ document.addEventListener('DOMContentLoaded', () => {
     checkEditorialScroll();
   }
 
-  // 10. Section 3: Pinned Horizontal Scroll Gallery Controller (Nexus Style)
-  const gallerySection = document.getElementById('pinnedGallerySection');
-  const galleryTrack = document.getElementById('pinnedGalleryTrack');
+  // 10. Section 3: Featured Works Scroll-Driven Slideshow Controller
+  const worksSection = document.getElementById('worksShowcaseSection');
+  const worksTrack = document.getElementById('worksSlideshowTrack');
 
-  if (gallerySection && galleryTrack) {
-    let galleryRaf = false;
+  if (worksSection && worksTrack) {
+    let worksRaf = false;
 
-    function renderHorizontalScroll() {
-      galleryRaf = false;
+    function renderWorksScroll() {
+      worksRaf = false;
 
-      // Only execute pinned horizontal translation on desktop/large screens
+      // In mobile/tablet screen sizes (<= 1024px), track uses native touch horizontal scroll
       if (window.innerWidth <= 1024) {
-        galleryTrack.style.transform = 'none';
+        worksTrack.style.transform = 'none';
         return;
       }
 
-      const rect = gallerySection.getBoundingClientRect();
-      const scrollDist = gallerySection.offsetHeight - window.innerHeight;
+      const rect = worksSection.getBoundingClientRect();
+      const scrollDist = worksSection.offsetHeight - window.innerHeight;
       if (scrollDist <= 0) return;
 
       const scrolled = -rect.top;
       // Clamp progress strictly between 0 and 1
       const progress = Math.min(1, Math.max(0, scrolled / scrollDist));
 
-      // Calculate max horizontal travel distance of track inside viewport
-      const viewportEl = galleryTrack.parentElement;
-      const viewportWidth = viewportEl ? viewportEl.offsetWidth : window.innerWidth * 0.6;
-      const trackWidth = galleryTrack.scrollWidth;
-      const maxTranslate = Math.max(0, trackWidth - viewportWidth + (window.innerWidth * 0.05));
+      // Calculate max horizontal travel distance inside the contained viewport
+      const viewportEl = worksTrack.parentElement;
+      const viewportWidth = viewportEl ? viewportEl.offsetWidth : window.innerWidth * 0.65;
+      const trackWidth = worksTrack.scrollWidth;
+      const maxTranslate = Math.max(0, trackWidth - viewportWidth);
 
       const currentX = -(progress * maxTranslate);
-      galleryTrack.style.transform = `translate3d(${currentX.toFixed(2)}px, 0, 0)`;
+      worksTrack.style.transform = `translate3d(${currentX.toFixed(2)}px, 0, 0)`;
     }
 
-    function onGalleryScroll() {
-      if (!galleryRaf) {
-        galleryRaf = true;
-        requestAnimationFrame(renderHorizontalScroll);
+    function onWorksScroll() {
+      if (!worksRaf) {
+        worksRaf = true;
+        requestAnimationFrame(renderWorksScroll);
       }
     }
 
-    window.addEventListener('scroll', onGalleryScroll, { passive: true });
-    window.addEventListener('resize', onGalleryScroll, { passive: true });
-    setTimeout(renderHorizontalScroll, 150);
+    window.addEventListener('scroll', onWorksScroll, { passive: true });
+    window.addEventListener('resize', onWorksScroll, { passive: true });
+    setTimeout(renderWorksScroll, 100);
   }
 });
 
