@@ -364,17 +364,67 @@ document.addEventListener('DOMContentLoaded', () => {
     checkEditorialScroll();
   }
 
-  // 10. Section 3: Featured Works Scroll-Driven Slideshow Controller (2-Box Crisp Showcase)
+  // 10. Section 3: Featured Works Scroll-Driven Slideshow Controller (1 Box At A Time)
   const worksSection = document.getElementById('worksShowcaseSection');
   const worksTrack = document.getElementById('worksSlideshowTrack');
+  const activeSlideNum = document.getElementById('activeSlideNum');
+  const slideDots = document.querySelectorAll('.works-dot');
+  const prevBtn = document.getElementById('worksPrevBtn');
+  const nextBtn = document.getElementById('worksNextBtn');
 
   if (worksSection && worksTrack) {
     let worksRaf = false;
+    let currentSlide = 0;
+    const totalSlides = 4;
+
+    function goToSlide(slideIndex, shouldScroll = false) {
+      currentSlide = Math.max(0, Math.min(totalSlides - 1, slideIndex));
+      
+      const viewportEl = worksTrack.parentElement;
+      const viewportWidth = viewportEl ? viewportEl.offsetWidth : 600;
+      const gap = 28;
+      const slideShift = viewportWidth + gap;
+      const targetX = -(currentSlide * slideShift);
+
+      worksTrack.style.transform = `translate3d(${targetX.toFixed(2)}px, 0, 0)`;
+
+      // Update counter and dots
+      if (activeSlideNum) {
+        activeSlideNum.textContent = String(currentSlide + 1).padStart(2, '0');
+      }
+
+      slideDots.forEach((dot, idx) => {
+        if (idx === currentSlide) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+
+      // Update card active classes
+      const cards = worksTrack.querySelectorAll('.works-slide-card');
+      cards.forEach((card, idx) => {
+        if (idx === currentSlide) {
+          card.classList.add('active');
+        } else {
+          card.classList.remove('active');
+        }
+      });
+
+      // If triggered by button or dot click, scroll runway to match
+      if (shouldScroll) {
+        const rect = worksSection.getBoundingClientRect();
+        const scrollDist = worksSection.offsetHeight - window.innerHeight;
+        const progressSteps = [0.08, 0.35, 0.65, 0.92];
+        const targetScrollTop = window.scrollY + rect.top + progressSteps[currentSlide] * scrollDist;
+        window.scrollTo({ top: targetScrollTop, behavior: 'smooth' });
+      }
+    }
 
     function renderWorksScroll() {
       worksRaf = false;
 
-      // In mobile/tablet screen sizes (<= 1024px), track uses native touch horizontal scroll
+      // Mobile/tablet screen sizes (<= 1024px) use native touch horizontal scroll
       if (window.innerWidth <= 1024) {
         worksTrack.style.transform = 'none';
         return;
@@ -385,33 +435,21 @@ document.addEventListener('DOMContentLoaded', () => {
       if (scrollDist <= 0) return;
 
       const scrolled = -rect.top;
-      // Clamp progress strictly between 0 and 1
       const progress = Math.min(1, Math.max(0, scrolled / scrollDist));
 
-      // Calculate the exact 2-card slide shift distance (viewport width + gap)
-      const viewportEl = worksTrack.parentElement;
-      const viewportWidth = viewportEl ? viewportEl.offsetWidth : 800;
-      const gap = 20;
-      const slideShift = viewportWidth + gap;
+      // Map progress to 4 discrete single-box slides
+      let targetSlide = 0;
+      if (progress >= 0.78) {
+        targetSlide = 3;
+      } else if (progress >= 0.50) {
+        targetSlide = 2;
+      } else if (progress >= 0.22) {
+        targetSlide = 1;
+      } else {
+        targetSlide = 0;
+      }
 
-      // Discrete, smooth 2-box step:
-      // Slide 0: Pair 1 [Card 0, Card 1] in full 100% view (progress < 0.45)
-      // Slide 1: Pair 2 [Card 2, Card 3] in full 100% view (progress >= 0.45)
-      const targetSlide = progress >= 0.45 ? 1 : 0;
-      const targetX = -(targetSlide * slideShift);
-
-      worksTrack.style.transform = `translate3d(${targetX.toFixed(2)}px, 0, 0)`;
-
-      // Active state highlight on cards
-      const cards = worksTrack.querySelectorAll('.works-slide-card');
-      cards.forEach((card, idx) => {
-        const isCurrentPair = (targetSlide === 0 && idx < 2) || (targetSlide === 1 && idx >= 2);
-        if (isCurrentPair) {
-          card.classList.add('active');
-        } else {
-          card.classList.remove('active');
-        }
-      });
+      goToSlide(targetSlide, false);
     }
 
     function onWorksScroll() {
@@ -423,6 +461,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', onWorksScroll, { passive: true });
     window.addEventListener('resize', onWorksScroll, { passive: true });
+
+    // Interactive Prev / Next arrow buttons
+    if (prevBtn) {
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        goToSlide(currentSlide - 1, true);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        goToSlide(currentSlide + 1, true);
+      });
+    }
+
+    // Interactive dot buttons
+    slideDots.forEach((dot) => {
+      dot.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetIndex = parseInt(dot.getAttribute('data-slide'), 10);
+        if (!isNaN(targetIndex)) {
+          goToSlide(targetIndex, true);
+        }
+      });
+    });
+
     setTimeout(renderWorksScroll, 100);
   }
 });

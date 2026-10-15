@@ -8,8 +8,8 @@
   
   <!-- Fonts & Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css?v=3.2">
-  <link rel="stylesheet" href="css/responsive.css?v=3.2">
+  <link rel="stylesheet" href="css/style.css?v=3.3">
+  <link rel="stylesheet" href="css/responsive.css?v=3.3">
 </head>
 <body>
 
@@ -302,7 +302,7 @@
       <div class="works-sticky-stage">
         <div class="works-showcase-container">
           
-          <!-- Left Column: Heading + Paragraph Only -->
+          <!-- Left Column: Heading + Paragraph + Controller -->
           <div class="works-intro-col">
             <h2 class="works-slider-title">
               Select <span class="gradient-text">Works</span>
@@ -310,6 +310,29 @@
             <p class="works-slider-desc">
               Explore our flagship digital engineering solutions, cloud native systems, and immersive web platforms engineered for world-class enterprises.
             </p>
+
+            <!-- Slide Controller: 1 Box At A Time -->
+            <div class="works-slide-controller">
+              <div class="works-slide-dots" id="worksSlideDots">
+                <button class="works-dot active" data-slide="0" aria-label="Project 01"></button>
+                <button class="works-dot" data-slide="1" aria-label="Project 02"></button>
+                <button class="works-dot" data-slide="2" aria-label="Project 03"></button>
+                <button class="works-dot" data-slide="3" aria-label="Project 04"></button>
+              </div>
+              <div class="works-slide-nav-arrows">
+                <button class="works-nav-arrow prev" id="worksPrevBtn" aria-label="Previous Project">
+                  <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <div class="works-slide-indicator">
+                  <span class="active-slide-num" id="activeSlideNum">01</span>
+                  <span class="slide-divider">/</span>
+                  <span class="total-slides-num">04</span>
+                </div>
+                <button class="works-nav-arrow next" id="worksNextBtn" aria-label="Next Project">
+                  <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
           </div>
 
         <!-- Right Column: Box Slideshow / Carousel -->
@@ -545,6 +568,6 @@
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="js/wave3d.js"></script>
-  <script src="js/main.js?v=3.2"></script>
+  <script src="js/main.js?v=3.3"></script>
 </body>
 </html>
