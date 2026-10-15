@@ -383,16 +383,25 @@ document.addEventListener('DOMContentLoaded', () => {
   if (worksSection && worksTrack) {
     let worksRaf = false;
     let currentSlide = 0;
-    const totalSlides = 4;
+    const cards = worksTrack.querySelectorAll('.works-slide-card');
+    const totalSlides = cards.length || 4;
+
+    function getStepShift() {
+      if (cards.length > 1) {
+        return cards[1].offsetLeft - cards[0].offsetLeft;
+      }
+      return cards[0] ? cards[0].offsetWidth + 24 : 450;
+    }
 
     function goToSlide(slideIndex, shouldScroll = false) {
       currentSlide = Math.max(0, Math.min(totalSlides - 1, slideIndex));
       
+      const stepShift = getStepShift();
       const viewportEl = worksTrack.parentElement;
-      const viewportWidth = viewportEl ? viewportEl.offsetWidth : 600;
-      const gap = 28;
-      const slideShift = viewportWidth + gap;
-      const targetX = -(currentSlide * slideShift);
+      const maxShift = viewportEl ? Math.max(0, worksTrack.scrollWidth - viewportEl.offsetWidth) : 0;
+      
+      // Shift by exactly 1 card distance per slide step, clamped to maxShift
+      const targetX = -Math.min(maxShift, currentSlide * stepShift);
 
       worksTrack.style.transform = `translate3d(${targetX.toFixed(2)}px, 0, 0)`;
 
@@ -402,28 +411,19 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       slideDots.forEach((dot, idx) => {
-        if (idx === currentSlide) {
-          dot.classList.add('active');
-        } else {
-          dot.classList.remove('active');
-        }
+        dot.classList.toggle('active', idx === currentSlide);
       });
 
-      // Update card active classes
-      const cards = worksTrack.querySelectorAll('.works-slide-card');
+      // Update card active classes & neon borders
       cards.forEach((card, idx) => {
-        if (idx === currentSlide) {
-          card.classList.add('active');
-        } else {
-          card.classList.remove('active');
-        }
+        card.classList.toggle('active', idx === currentSlide);
       });
 
-      // If triggered by button or dot click, scroll runway to match
+      // If triggered by button or dot click, scroll runway smoothly
       if (shouldScroll) {
         const rect = worksSection.getBoundingClientRect();
         const scrollDist = worksSection.offsetHeight - window.innerHeight;
-        const progressSteps = [0.08, 0.35, 0.65, 0.92];
+        const progressSteps = [0.05, 0.35, 0.65, 0.95];
         const targetScrollTop = window.scrollY + rect.top + progressSteps[currentSlide] * scrollDist;
         window.scrollTo({ top: targetScrollTop, behavior: 'smooth' });
       }
@@ -445,13 +445,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const scrolled = -rect.top;
       const progress = Math.min(1, Math.max(0, scrolled / scrollDist));
 
-      // Map progress to 4 discrete single-box slides
+      // Map progress smoothly to 4 discrete single-box slides
       let targetSlide = 0;
-      if (progress >= 0.78) {
+      if (progress >= 0.75) {
         targetSlide = 3;
-      } else if (progress >= 0.50) {
+      } else if (progress >= 0.48) {
         targetSlide = 2;
-      } else if (progress >= 0.22) {
+      } else if (progress >= 0.20) {
         targetSlide = 1;
       } else {
         targetSlide = 0;
@@ -470,7 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', onWorksScroll, { passive: true });
     window.addEventListener('resize', onWorksScroll, { passive: true });
 
-    // Interactive Prev / Next arrow buttons
+    // Interactive Prev / Next arrow buttons (steps 1 box at a time)
     if (prevBtn) {
       prevBtn.addEventListener('click', (e) => {
         e.preventDefault();
@@ -493,6 +493,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isNaN(targetIndex)) {
           goToSlide(targetIndex, true);
         }
+      });
+    });
+
+    // Card click selection
+    cards.forEach((card, idx) => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('a')) return;
+        goToSlide(idx, true);
       });
     });
 

@@ -7,9 +7,12 @@
   <meta name="description" content="XIPHIAS crafts hyper-scalable enterprise cloud software, AI automation pipelines, and zero-trust cybersecurity architectures with 3D fluid innovation.">
   
   <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Syne:wght@700;800;900&family=Space+Grotesk:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css?v=3.4">
-  <link rel="stylesheet" href="css/responsive.css?v=3.4">
+  <link rel="stylesheet" href="css/style.css?v=4.0">
+  <link rel="stylesheet" href="css/responsive.css?v=4.0">
 </head>
 <body>
 
@@ -296,19 +299,26 @@
       </svg>
     </div>
 
-    <!-- Section 3: Pinned Horizontal Scroll Gallery (Nexus Style) -->
-    <!-- Section 3: Featured Works Scroll Slideshow -->
+    <!-- Section 3: Pinned Horizontal Case Studies Gallery (Nexus 3D Style) -->
     <section class="works-showcase-section" id="worksShowcaseSection">
       <div class="works-sticky-stage">
+        
+        <!-- Pinned Top Pill Badge (Nexus Style) -->
+        <div class="works-pinned-badge">
+          <i class="fa-solid fa-sparkles"></i>
+          <span>PINNED GALLERY // HORIZONTAL SCROLL SCENE 03</span>
+        </div>
+
         <div class="works-showcase-container">
           
-          <!-- Left Column: Heading + Paragraph + Controller -->
+          <!-- Left Column: Typography & Slide Controls -->
           <div class="works-intro-col">
+            <div class="works-eyebrow">// FEATURED CASE STUDIES</div>
             <h2 class="works-slider-title">
-              Select <span class="gradient-text">Works</span>
+              SELECT <br><span class="gradient-text-cyan">WORKS</span>
             </h2>
             <p class="works-slider-desc">
-              Explore our flagship digital engineering solutions, cloud native systems, and immersive web platforms engineered for world-class enterprises.
+              Drag or scroll horizontally through our award-winning case studies. Click any project to open full technical specifications.
             </p>
 
             <!-- Slide Controller: 1 Box At A Time -->
@@ -335,140 +345,144 @@
             </div>
           </div>
 
-        <!-- Right Column: Box Slideshow / Carousel -->
-        <div class="works-slideshow-viewport" id="worksSlideshowViewport">
-          <div class="works-slideshow-track" id="worksSlideshowTrack">
-            
-            <!-- Slide Box 01: PROJECT OMEGA -->
-            <article class="works-slide-card active" data-index="0">
-              <div class="slide-card-media">
-                <img src="images/project-omega.jpg" alt="Project Omega - Autonomous Spatial WebGL Platform" class="slide-card-img" loading="lazy">
-                <span class="slide-card-category">SPATIAL WEBGL / THREE.JS</span>
-              </div>
-              <div class="slide-card-body">
-                <div class="slide-card-meta">
-                  <span class="slide-project-num">PROJECT #01</span>
-                  <span class="slide-release-year">RELEASE: 2026</span>
+          <!-- Right Column: Box Slideshow / Carousel (2 Boxes Visible side-by-side, 1 box advance per step) -->
+          <div class="works-slideshow-viewport" id="worksSlideshowViewport">
+            <div class="works-slideshow-track" id="worksSlideshowTrack">
+              
+              <!-- Slide Box 01: PROJECT OMEGA -->
+              <article class="works-slide-card active" data-index="0">
+                <div class="slide-card-media">
+                  <img src="images/project-omega.jpg" alt="Project Omega - Autonomous Spatial WebGL Platform" class="slide-card-img" loading="lazy">
+                  <div class="slide-media-grid-overlay"></div>
+                  <span class="slide-card-category">SPATIAL WEBGL / THREE.JS</span>
+                  <div class="slide-card-play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
                 </div>
-                <h3 class="slide-card-title">PROJECT OMEGA</h3>
-                <p class="slide-card-tagline">Autonomous WebGL spatial metaverse platform featuring real-time 3D simulations and GPU-accelerated graphics.</p>
-                <div class="slide-card-tags">
-                  <span class="tech-pill">Three.js</span>
-                  <span class="tech-pill">React</span>
-                  <span class="tech-pill">GLSL Shaders</span>
-                  <span class="tech-pill">WebRTC</span>
-                </div>
-                <div class="slide-card-footer">
-                  <div class="slide-metric-group">
-                    <span class="metric-indicator live-pulse"></span>
-                    <span class="slide-metric-text">2.4M ACTIVE VISITORS</span>
+                <div class="slide-card-body">
+                  <div class="slide-card-meta">
+                    <span class="slide-project-num">PROJECT #01</span>
+                    <span class="slide-release-year">RELEASE: 2026</span>
                   </div>
-                  <a href="products.html" class="slide-action-btn" aria-label="View Project Omega Case Study">
-                    <span>Explore</span>
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Slide Box 02: CYBER-KINETIC -->
-            <article class="works-slide-card" data-index="1">
-              <div class="slide-card-media">
-                <img src="images/project-cyber.jpg" alt="Cyber-Kinetic Interface Suite" class="slide-card-img" loading="lazy">
-                <span class="slide-card-category">CREATIVE FRONTEND & FINTECH</span>
-              </div>
-              <div class="slide-card-body">
-                <div class="slide-card-meta">
-                  <span class="slide-project-num">PROJECT #02</span>
-                  <span class="slide-release-year">RELEASE: 2026</span>
-                </div>
-                <h3 class="slide-card-title">CYBER-KINETIC</h3>
-                <p class="slide-card-tagline">Next-generation cyberpunk trading terminal and interactive UI suite with high-frequency live data feeds.</p>
-                <div class="slide-card-tags">
-                  <span class="tech-pill">Next.js</span>
-                  <span class="tech-pill">GSAP Scroll</span>
-                  <span class="tech-pill">Tailwind</span>
-                  <span class="tech-pill">Canvas</span>
-                </div>
-                <div class="slide-card-footer">
-                  <div class="slide-metric-group">
-                    <span class="metric-indicator award-pulse"></span>
-                    <span class="slide-metric-text">FWA SITE OF THE DAY</span>
+                  <h3 class="slide-card-title">PROJECT OMEGA</h3>
+                  <p class="slide-card-tagline">Autonomous WebGL spatial metaverse platform built with volumetric raymarching, real-time multiplayer audio, and custom shaders.</p>
+                  <div class="slide-card-tags">
+                    <span class="tech-pill">Three.js</span>
+                    <span class="tech-pill">React</span>
+                    <span class="tech-pill">GLSL Shaders</span>
+                    <span class="tech-pill">WebRTC</span>
                   </div>
-                  <a href="services.html" class="slide-action-btn" aria-label="View Cyber-Kinetic Case Study">
-                    <span>Explore</span>
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-
-            <!-- Slide Box 03: NEURAL MESH -->
-            <article class="works-slide-card" data-index="2">
-              <div class="slide-card-media">
-                <img src="images/project-neural.jpg" alt="Neural Mesh Hypercloud Architecture" class="slide-card-img" loading="lazy">
-                <span class="slide-card-category">DISTRIBUTED CLOUD / K8S</span>
-              </div>
-              <div class="slide-card-body">
-                <div class="slide-card-meta">
-                  <span class="slide-project-num">PROJECT #03</span>
-                  <span class="slide-release-year">RELEASE: 2026</span>
-                </div>
-                <h3 class="slide-card-title">NEURAL MESH</h3>
-                <p class="slide-card-tagline">Self-healing hypercloud architecture connecting distributed microservices with dynamic traffic shaping.</p>
-                <div class="slide-card-tags">
-                  <span class="tech-pill">Kubernetes</span>
-                  <span class="tech-pill">Rust</span>
-                  <span class="tech-pill">gRPC</span>
-                  <span class="tech-pill">Kafka</span>
-                </div>
-                <div class="slide-card-footer">
-                  <div class="slide-metric-group">
-                    <span class="metric-indicator live-pulse"></span>
-                    <span class="slide-metric-text">99.999% SLA UPTIME</span>
+                  <div class="slide-card-footer">
+                    <div class="slide-metric-group">
+                      <span class="metric-indicator live-pulse"></span>
+                      <span class="slide-metric-text">2.4M ACTIVE VISITORS • 60 FPS</span>
+                    </div>
+                    <a href="products.html" class="slide-action-circle" aria-label="Explore Project Omega Specifications">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
                   </div>
-                  <a href="services.html" class="slide-action-btn" aria-label="View Neural Mesh Case Study">
-                    <span>Explore</span>
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                  </a>
                 </div>
-              </div>
-            </article>
+              </article>
 
-            <!-- Slide Box 04: QUANTUM VAULT -->
-            <article class="works-slide-card" data-index="3">
-              <div class="slide-card-media">
-                <img src="images/project-vault.jpg" alt="Quantum Vault Cryptography Enclave" class="slide-card-img" loading="lazy">
-                <span class="slide-card-category">ZERO-TRUST CYBER DEFENSE</span>
-              </div>
-              <div class="slide-card-body">
-                <div class="slide-card-meta">
-                  <span class="slide-project-num">PROJECT #04</span>
-                  <span class="slide-release-year">RELEASE: 2026</span>
+              <!-- Slide Box 02: CYBER-KINETIC -->
+              <article class="works-slide-card" data-index="1">
+                <div class="slide-card-media">
+                  <img src="images/project-cyber.jpg" alt="Cyber-Kinetic Interface Suite" class="slide-card-img" loading="lazy">
+                  <div class="slide-media-grid-overlay"></div>
+                  <span class="slide-card-category">CREATIVE FRONTEND FLEX</span>
+                  <div class="slide-card-play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
                 </div>
-                <h3 class="slide-card-title">QUANTUM VAULT</h3>
-                <p class="slide-card-tagline">Post-quantum cryptography enclave securing critical enterprise datasets against quantum vectors.</p>
-                <div class="slide-card-tags">
-                  <span class="tech-pill">Post-Quantum</span>
-                  <span class="tech-pill">Wasm</span>
-                  <span class="tech-pill">eBPF</span>
-                  <span class="tech-pill">Go</span>
-                </div>
-                <div class="slide-card-footer">
-                  <div class="slide-metric-group">
-                    <span class="metric-indicator shield-pulse"></span>
-                    <span class="slide-metric-text">0-BREACH PROTOCOL</span>
+                <div class="slide-card-body">
+                  <div class="slide-card-meta">
+                    <span class="slide-project-num">PROJECT #02</span>
+                    <span class="slide-release-year">RELEASE: 2026</span>
                   </div>
-                  <a href="contact.html" class="slide-action-btn" aria-label="View Quantum Vault Case Study">
-                    <span>Explore</span>
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                  </a>
+                  <h3 class="slide-card-title">CYBER-KINETIC</h3>
+                  <p class="slide-card-tagline">Next-generation cyberpunk trading terminal and interactive UI suite featuring zero-latency canvas node graphs and GLSL glitch filters.</p>
+                  <div class="slide-card-tags">
+                    <span class="tech-pill">Next.js</span>
+                    <span class="tech-pill">GSAP Scroll</span>
+                    <span class="tech-pill">Tailwind</span>
+                    <span class="tech-pill">Canvas</span>
+                  </div>
+                  <div class="slide-card-footer">
+                    <div class="slide-metric-group">
+                      <span class="metric-indicator award-pulse"></span>
+                      <span class="slide-metric-text">FWA SITE OF THE DAY • AWWWARDS</span>
+                    </div>
+                    <a href="services.html" class="slide-action-circle" aria-label="Explore Cyber-Kinetic Specifications">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </div>
                 </div>
-              </div>
-            </article>
+              </article>
 
+              <!-- Slide Box 03: AETHER 3D AUDIO -->
+              <article class="works-slide-card" data-index="2">
+                <div class="slide-card-media">
+                  <img src="images/project-neural.jpg" alt="Aether 3D Audio Reactive Environment" class="slide-card-img" loading="lazy">
+                  <div class="slide-media-grid-overlay"></div>
+                  <span class="slide-card-category">AUDIO-REACTIVE SYNTHESIS</span>
+                  <div class="slide-card-play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="slide-card-body">
+                  <div class="slide-card-meta">
+                    <span class="slide-project-num">PROJECT #03</span>
+                    <span class="slide-release-year">RELEASE: 2025</span>
+                  </div>
+                  <h3 class="slide-card-title">AETHER 3D AUDIO</h3>
+                  <p class="slide-card-tagline">Generative shader & sound environment where users orchestrate procedural audio tracks driven by live WebGL particle collision physics.</p>
+                  <div class="slide-card-tags">
+                    <span class="tech-pill">Web Audio API</span>
+                    <span class="tech-pill">Canvas 2D</span>
+                    <span class="tech-pill">GLSL</span>
+                    <span class="tech-pill">WebGL</span>
+                  </div>
+                  <div class="slide-card-footer">
+                    <div class="slide-metric-group">
+                      <span class="metric-indicator live-pulse"></span>
+                      <span class="slide-metric-text">100% PROCEDURAL • ZERO ASSETS</span>
+                    </div>
+                    <a href="services.html" class="slide-action-circle" aria-label="Explore Aether 3D Audio Specifications">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Slide Box 04: QUANTUM VAULT -->
+              <article class="works-slide-card" data-index="3">
+                <div class="slide-card-media">
+                  <img src="images/project-vault.jpg" alt="Quantum Vault Cryptography Enclave" class="slide-card-img" loading="lazy">
+                  <div class="slide-media-grid-overlay"></div>
+                  <span class="slide-card-category">ZERO-TRUST CYBER DEFENSE</span>
+                  <div class="slide-card-play-btn" aria-hidden="true"><i class="fa-solid fa-play"></i></div>
+                </div>
+                <div class="slide-card-body">
+                  <div class="slide-card-meta">
+                    <span class="slide-project-num">PROJECT #04</span>
+                    <span class="slide-release-year">RELEASE: 2026</span>
+                  </div>
+                  <h3 class="slide-card-title">QUANTUM VAULT</h3>
+                  <p class="slide-card-tagline">Post-quantum cryptography enclave securing critical enterprise datasets and low-latency microservice communications against quantum vectors.</p>
+                  <div class="slide-card-tags">
+                    <span class="tech-pill">Post-Quantum</span>
+                    <span class="tech-pill">Wasm</span>
+                    <span class="tech-pill">eBPF</span>
+                    <span class="tech-pill">Go</span>
+                  </div>
+                  <div class="slide-card-footer">
+                    <div class="slide-metric-group">
+                      <span class="metric-indicator shield-pulse"></span>
+                      <span class="slide-metric-text">0-BREACH PROTOCOL • MIL-SPEC</span>
+                    </div>
+                    <a href="contact.html" class="slide-action-circle" aria-label="Explore Quantum Vault Specifications">
+                      <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </a>
+                  </div>
+                </div>
+              </article>
+
+            </div>
           </div>
-        </div>
 
         </div>
       </div>
@@ -568,6 +582,6 @@
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="js/wave3d.js"></script>
-  <script src="js/main.js?v=3.4"></script>
+  <script src="js/main.js?v=4.0"></script>
 </body>
 </html>
