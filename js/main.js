@@ -46,10 +46,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 3. Highlight current page in navbar
-  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const path = window.location.pathname;
+  let pageName = path.split('/').filter(Boolean).pop() || 'index.html';
+  if (!pageName.endsWith('.html') && pageName !== 'index.html') {
+    pageName = pageName + '.html';
+  }
+  
   document.querySelectorAll('.nav-link').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    const href = link.getAttribute('href') || '';
+    const isHomePage = (path === '/' || path === '' || path.endsWith('/index.html') || pageName === 'index.html') && href.includes('index.html');
+    const isCurrent = isHomePage || href === pageName || href.endsWith('/' + pageName);
+
+    if (isCurrent) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
