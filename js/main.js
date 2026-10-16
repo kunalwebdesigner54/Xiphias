@@ -46,21 +46,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // 3. Highlight current page in navbar
-  const path = window.location.pathname;
-  let pageName = path.split('/').filter(Boolean).pop() || 'index.html';
-  if (!pageName.endsWith('.html') && pageName !== 'index.html') {
-    pageName = pageName + '.html';
-  }
-  
-  document.querySelectorAll('.nav-link').forEach(link => {
-    const href = link.getAttribute('href') || '';
-    const isHomePage = (path === '/' || path === '' || path.endsWith('/index.html') || pageName === 'index.html') && href.includes('index.html');
-    const isCurrent = isHomePage || href === pageName || href.endsWith('/' + pageName);
+  const path = window.location.pathname.toLowerCase();
+  const isHomePage = path === '/' || path === '' || path.endsWith('/index.html') || path.endsWith('/index') || path.endsWith('/') || document.body.classList.contains('page-home');
 
-    if (isCurrent) {
-      link.classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(link => {
+    const href = (link.getAttribute('href') || '').toLowerCase();
+    const isLinkHome = href === 'index.html' || href.includes('index.html') || link.classList.contains('nav-link-home');
+
+    if (isHomePage) {
+      if (isLinkHome) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
     } else {
-      link.classList.remove('active');
+      let pageName = path.split('/').filter(Boolean).pop() || '';
+      if (!pageName.endsWith('.html') && pageName) pageName += '.html';
+      const isCurrent = pageName && (href === pageName || href.endsWith('/' + pageName));
+      if (isCurrent) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
     }
   });
 
